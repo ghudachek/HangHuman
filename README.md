@@ -10,22 +10,7 @@ Description: Hangman (but inclusive to all humans) online version! Varying level
 
 API: Airtable will hold my levels. Easy,medium, and hard as well as a topic (descriptor for the word/phrase to be guessed) and the answer (hidden to be guessed). Users will be given the ability to make up their own hangman words/phrases and they will be added to approproate level for others to play.
 
-"records": [
-        {
-            "id": "rec6S1h69BjT7P0Ey",
-            "fields": {
-                "level": "easy",
-                "category": "game",
-                "word": "hangman"
-            },
-            "createdTime": "2021-02-15T23:24:44.000Z"
-        },
-        {
-            "id": "recxvMEGWvKTmwJxq",
-            "fields": {
-                "level": "medium",
-                "category": "animal",
-                "word": "flamingo"
+a!(Screen Shot 2021-02-15 at 5.32.31 PM.png)
 
 MVP: Your goals for MVP, including the minimum, need-to-have features of your app.
 - starter page: selecting level of difficulty
