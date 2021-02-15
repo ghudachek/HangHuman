@@ -51,12 +51,12 @@ Timeframes:
 | Add Css to main & component pages| M | 4hrs| hrs | hrs |
 | Create MediaQuery for tablet breakpoint and phone break points | M | 3hrs| hrs |hrs |
 
-| Total |  | 31hrs| hrs | hrs |
+| Total |  | 29hrs| hrs | hrs |
 
 
 
 SWOT Analysis: 
-- Strengths: Using/making: Forms, Css Grid, components
-- Weaknesses: designing any animations/ finding what to use as a hang human..
-- Opportunities: creating an alternative design to hangman and some cool added features with animations
+- Strengths: Using/making: Forms, Css Grid, components.
+- Weaknesses: designing any animations/ finding what to use as a hang human.
+- Opportunities: creating an alternative design to hangman and some cool added features with animations.
 - Threats: Time limit to complete, complications with airtable data. 
