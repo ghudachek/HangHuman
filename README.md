@@ -1,4 +1,4 @@
-# HangMan
+# HangHuman
 Title: HangHuman
 Description: Hangman (but inclusive to all humans) online version! Varying levels of difficulty where you must guess the words/phrases to save your hang- human!
 
@@ -53,7 +53,7 @@ Timeframes:
 
 
 
-SWOT Analysis: How will you overcome your weaknesses and threats?
+SWOT Analysis: 
 - Strengths: Using/making: Forms, Css Grid, components
 - Weaknesses: designing any animations/ finding what to use as a hang human..
 - Opportunities: creating an alternative design to hangman and some cool added features with animations
