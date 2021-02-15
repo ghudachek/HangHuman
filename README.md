@@ -2,15 +2,15 @@
 Title: HangHuman
 Description: Hangman (but inclusive to all humans) online version! Varying levels of difficulty where you must guess the words/phrases to save your hang- human!
 
-![Wireframes](https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
+[Wireframes](https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
 
 
-[Component Hierarchy](https://drive.google.com/file/d/1HnzzlCxdl3m2t56aIFi6bpKU4dtNzxLD/view?usp=sharing)
+![Component Hierarchy](https://drive.google.com/file/d/1HnzzlCxdl3m2t56aIFi6bpKU4dtNzxLD/view?usp=sharing)
 
 
 API: Airtable will hold my levels. Easy,medium, and hard as well as a topic (descriptor for the word/phrase to be guessed) and the answer (hidden to be guessed). Users will be given the ability to make up their own hangman words/phrases and they will be added to approproate level for others to play.
 
-![Example API Data](Screen Shot 2021-02-15 at 5.32.31 PM.png)
+[Example API Data]
 
 MVP: Your goals for MVP, including the minimum, need-to-have features of your app.
 - starter page: selecting level of difficulty
