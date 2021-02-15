@@ -1,10 +1,14 @@
 # HangMan
-Title: HANGWHOAMAN
-Description: Hangman online! Varying levels of difficulty where you must guess the words/phrases to save your hangman/woman!
-Wireframes: Mockups of your app on desktop, tablet, and mobile.
-Component Hierarchy: A visual tree of your components, depicting the parent/child relationships, as well as an indication of which will be class components, requiring state, and which will be functional components, taking props.
-API: How you will be using Airtable to handle your data, as well as a sample data pull from your Airtable database.
-- Airtable will hold my levels. Easy,medium, and hard as well as a topic (descriptor for the word/phrase to be guessed) and the answer (hidden to be guessed). Users will be given the ability to make up their own hangman words.phrases and they will be added to approproate level for others to play.
+Title: HangHuman
+Description: Hangman (but inclusive to all humans) online version! Varying levels of difficulty where you must guess the words/phrases to save your hang- human!
+
+Wireframes: 
+a!(https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
+Component Hierarchy:
+a!(https://drive.google.com/file/d/1HnzzlCxdl3m2t56aIFi6bpKU4dtNzxLD/view?usp=sharing)
+
+
+API: Airtable will hold my levels. Easy,medium, and hard as well as a topic (descriptor for the word/phrase to be guessed) and the answer (hidden to be guessed). Users will be given the ability to make up their own hangman words/phrases and they will be added to approproate level for others to play.
 
 MVP: Your goals for MVP, including the minimum, need-to-have features of your app.
 - starter page: selecting level of difficulty
@@ -17,32 +21,40 @@ MVP: Your goals for MVP, including the minimum, need-to-have features of your ap
 Post-MVP: Write out what your goals are for post-MVP, including nice-to-have features that you would like to implement once your MVP is complete. (If you plan to use a component library, please link that here as well.)
 - Choose player option: users can pick a character for their stick figure
 - Choose your background: background options of danger ! where the hangman/women is placed while the game is played
+- Ability to choose a category(i.e. animals, famous phrases, famous person...)
 
 
 Project Schedule: Lay out your timeline for your project, from proposal to deployment.
-Timeframes: Estimate out how much time you'll need for each part of your project! This will help you determine your schedule as well as how to prioritize certain features.
+feb 16: Project Proposal/ approval and boiler plating, component links, airtable linking.
+feb 17: Create components JS for starter page, game page.
+feb 18: Create correct/incorrect/winner/loser alerts/animations.
+feb 19: Create Form for added levels, Css, mediaqueries.
+feb 20/21: added Css or Post MVP.
+feb 22: Present.
+
+
+Timeframes: 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Create API in Airtable | H | 1 hrs| hrs | hrs |
-| Create App Js boiler and components boilers | H | 0.5hrs| hrs | hrs |
+| Create App Js boiler and components boilers | H | 1hrs| hrs | hrs |
+| Add call to airtable Api, make sure we grab data accordignly and add to page | H | 3hrs| hrs | hrs |
 | Construct easy, medium, hard buttons with links to proper page | H | 2hrs| hrs | hrs |
-| Construct easy, medium, hard questions game play page: where the answers are hidden and alphebet is shown for user| H | 3hrs| hrs | hrs |
+| Construct easy, medium, hard questions game play page: where the answers are hidden and alphebet is shown for user| H | 4hrs| hrs | hrs |
 | Create animations for wrong answer and right answer | H | 3hrs| hrs | hrs |
-| Create "you lose" and "you win" alert/animations | H | 3hrs| hrs | hrs |
+| Create "you lose" and "you win" alert/animations | M | 3hrs| hrs | hrs |
 | Js conditionals to connect animations to play at proper times  | H | 3hrs| hrs | hrs |
-| Construct form for users to make their own hangman words | H | 1hrs| hrs | hrs |
-| Add Css to main component pages| H | 3hrs| hrs | hrs |
-| Create MediaQuery for tablet breakpoint and phone break points | H | 3hrs| hrs |hrs |
-| | H | 3hrs| NA/hrs | NA/hrs |
-| | H | 3hrs| NA/hrs | NA/hrs |
+| Construct form for users to make their own hangman words | H | 2hrs| hrs | hrs |
+| Add Css to main & component pages| M | 4hrs| hrs | hrs |
+| Create MediaQuery for tablet breakpoint and phone break points | M | 3hrs| hrs |hrs |
 
-| Total | H | 30.5hrs| 22hrs | 22hrs |
+| Total |  | 31hrs| hrs | hrs |
 
 
 
 SWOT Analysis: How will you overcome your weaknesses and threats?
-- Strengths: 
-- Weaknesses:
-- Opportunities:
-- Threats:
+- Strengths: Using/making: Forms, Css Grid, components
+- Weaknesses: designing any animations/ finding what to use as a hang human..
+- Opportunities: creating an alternative design to hangman and some cool added features with animations
+- Threats: Time limit to complete, complications with airtable data. 
