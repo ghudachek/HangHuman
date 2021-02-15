@@ -5,7 +5,7 @@ Description: Hangman (but inclusive to all humans) online version! Varying level
 [Wireframes](https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
 
 
-![Component Hierarchy](https://drive.google.com/file/d/1HnzzlCxdl3m2t56aIFi6bpKU4dtNzxLD/view?usp=sharing)
+[Component Hierarchy](https://drive.google.com/file/d/1HnzzlCxdl3m2t56aIFi6bpKU4dtNzxLD/view?usp=sharing)
 
 
 API: Airtable will hold my levels. Easy,medium, and hard as well as a topic (descriptor for the word/phrase to be guessed) and the answer (hidden to be guessed). Users will be given the ability to make up their own hangman words/phrases and they will be added to approproate level for others to play.
