@@ -22,6 +22,23 @@ Post-MVP: Write out what your goals are for post-MVP, including nice-to-have fea
 Project Schedule: Lay out your timeline for your project, from proposal to deployment.
 Timeframes: Estimate out how much time you'll need for each part of your project! This will help you determine your schedule as well as how to prioritize certain features.
 
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Create API in Airtable | H | 1 hrs| hrs | hrs |
+| Create App Js boiler and components boilers | H | 0.5hrs| hrs | hrs |
+| Construct easy, medium, hard buttons with links to proper page | H | 2hrs| hrs | hrs |
+| Construct easy, medium, hard questions game play page: where the answers are hidden and alphebet is shown for user| H | 3hrs| hrs | hrs |
+| Create animations for wrong answer and right answer | H | 3hrs| hrs | hrs |
+| Create "you lose" and "you win" alert/animations | H | 3hrs| hrs | hrs |
+| Js conditionals to connect animations to play at proper times  | H | 3hrs| hrs | hrs |
+| Construct form for users to make their own hangman words | H | 1hrs| hrs | hrs |
+| Add Css to main component pages| H | 3hrs| hrs | hrs |
+| Create MediaQuery for tablet breakpoint and phone break points | H | 3hrs| hrs |hrs |
+| | H | 3hrs| NA/hrs | NA/hrs |
+| | H | 3hrs| NA/hrs | NA/hrs |
+
+| Total | H | 30.5hrs| 22hrs | 22hrs |
+
 
 
 SWOT Analysis: How will you overcome your weaknesses and threats?
