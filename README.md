@@ -29,12 +29,12 @@ Post-MVP:
 
 Project Schedule:
 
--feb 16: Project Proposal/ approval and boiler plating, component links, airtable linking.
--feb 17: Create components JS for starter page, game page.
--feb 18: Create correct/incorrect/winner/loser alerts/animations.
--feb 19: Create Form for added levels, Css, mediaqueries.
--feb 20/21: added Css or Post MVP.
--feb 22: Present.
+- feb 16: Project Proposal/ approval and boiler plating, component links, airtable linking.
+- feb 17: Create components JS for starter page, game page.
+- feb 18: Create correct/incorrect/winner/loser alerts/animations.
+- feb 19: Create Form for added levels, Css, mediaqueries.
+- feb 20/21: added Css or Post MVP.
+- feb 22: Present.
 
 
 Timeframes: 
