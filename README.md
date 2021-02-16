@@ -1,5 +1,6 @@
 # HangHuman
 Title: HangHuman
+
 Description: Hangman (but inclusive to all humans) online version! Varying levels of difficulty where you must guess the words/phrases to save your hang- human!
 
 [Wireframes](https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
@@ -12,7 +13,7 @@ API: Airtable will hold my levels. Easy,medium, and hard as well as a topic (des
 
 ![Example API Data](ApiExampleData.png)
 
-MVP: Your goals for MVP, including the minimum, need-to-have features of your app.
+MVP: 
 - starter page: selecting level of difficulty
 - three levels of difficulty each with at least three pre-made questions and answers for users to guess.
 - buttons with letters A-Z for users to click when playing
@@ -20,19 +21,20 @@ MVP: Your goals for MVP, including the minimum, need-to-have features of your ap
 - a stick figure and animation for when the user gets answer wrong or right
 - a winners and losers animation that plays when user wins or loses
 
-Post-MVP: Write out what your goals are for post-MVP, including nice-to-have features that you would like to implement once your MVP is complete. (If you plan to use a component library, please link that here as well.)
+Post-MVP: 
 - Choose player option: users can pick a character for their stick figure
 - Choose your background: background options of danger ! where the hangman/women is placed while the game is played
 - Ability to choose a category(i.e. animals, famous phrases, famous person...)
 
 
-Project Schedule: Lay out your timeline for your project, from proposal to deployment.
-feb 16: Project Proposal/ approval and boiler plating, component links, airtable linking.
-feb 17: Create components JS for starter page, game page.
-feb 18: Create correct/incorrect/winner/loser alerts/animations.
-feb 19: Create Form for added levels, Css, mediaqueries.
-feb 20/21: added Css or Post MVP.
-feb 22: Present.
+Project Schedule:
+
+|feb 16: Project Proposal/ approval and boiler plating, component links, airtable linking.
+|feb 17: Create components JS for starter page, game page.
+|feb 18: Create correct/incorrect/winner/loser alerts/animations.
+|feb 19: Create Form for added levels, Css, mediaqueries.
+|feb 20/21: added Css or Post MVP.
+|feb 22: Present.
 
 
 Timeframes: 
