@@ -6,6 +6,7 @@ import axios from "axios";
 import Levels from "./components/levels";
 import Header from "./components/header";
 import Form from "./components/form";
+import StickFigure from "./components/stickFigure";
 
 function App() {
   const [data, setData] = useState();
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <Route exact path="/">
         <Header />
+        <StickFigure />
       </Route>
       <Route exact path="/form">
         <Form setToggleFetch={setToggleFetch} />

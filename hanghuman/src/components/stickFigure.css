@@ -1,0 +1,115 @@
+.head {
+  width: 70px;
+  height: 70px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 133px;
+  z-index: 1;
+  transform-origin: center bottom;
+}
+.eye {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  border: 2px solid black;
+  top: 20px;
+  top: 45px;
+  left: 150px;
+}
+.eyeRight {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  border: 2px solid black;
+  top: 45px;
+  left: 180px;
+}
+.arc {
+  width: 35px;
+  height: 10px;
+  border-radius: 50%;
+  border-right: 1px solid white;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid white;
+  display: block;
+  position: absolute;
+  top: 65px;
+  left: 150px;
+}
+
+.torso {
+  height: 90px;
+  border: 7px solid black;
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 165px;
+}
+
+.leftleg {
+  height: 150px;
+  border: 3px solid black;
+  fill: black;
+  display: block;
+  position: absolute;
+  top: 180px;
+  left: 170px;
+  transform: rotate(12deg);
+  transform-origin: top;
+}
+.fa-umbrella {
+  font-size: 200px;
+  text-align: left;
+  color: black;
+  top: 0px;
+  transform: rotate(20deg);
+}
+.rightleg {
+  height: 150px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 180px;
+  left: 170px;
+  transform: rotate(-12deg);
+  transform-origin: top;
+}
+
+.leftarm {
+  width: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 80px;
+  transform: rotate(-50deg);
+  transform-origin: top;
+}
+.rightarmupper {
+  width: 70px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 110px;
+  left: 205px;
+  transform: rotate(-50deg);
+  transform-origin: top;
+}
+.rightarm {
+  width: 50px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 175px;
+  transform: rotate(30deg);
+  transform-origin: top;
+}
