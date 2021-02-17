@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <div>
+      <Link to="/">
         <h3>Choose a Level:</h3>
         <button>
-          <Link to="/:easy">Easy</Link>
+          <Link to="/easy/:easy">Easy</Link>
         </button>
         <button>
-          <Link to="/:medium">Medium</Link>
+          <Link to="/medium/:medium">Medium</Link>
         </button>
         <button>
-          <Link to="/:hard">Hard</Link>
+          <Link to="/hard/:hard">Hard</Link>
         </button>
-      </div>
+      </Link>
     </div>
   );
 }

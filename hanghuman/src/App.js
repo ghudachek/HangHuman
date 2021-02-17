@@ -8,6 +8,8 @@ import Header from "./components/header";
 function App() {
   const [data, setData] = useState();
   const [games, setGames] = useState();
+  const [correctLetters, setCorrectLetters] = useState();
+  const [wrongLetters, setWrongLetters] = useState();
 
   useEffect(() => {
     const getData = async () => {
@@ -21,8 +23,17 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Route exact path="/:easy">
+      <Route exact path="/">
+        <Header />
+      </Route>
+
+      <Route exact path="/easy/:easy">
+        {games ? <Levels games={games} /> : null}
+      </Route>
+      <Route exact path="/medium/:medium">
+        {games ? <Levels games={games} /> : null}
+      </Route>
+      <Route exact path="/hard/:hard">
         {games ? <Levels games={games} /> : null}
       </Route>
     </div>
