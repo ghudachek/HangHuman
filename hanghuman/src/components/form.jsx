@@ -1,8 +1,8 @@
 import axios from "axios";
 import { baseURL, config } from "../services";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function Form() {
+function Form(props) {
   const [word, setWord] = useState("");
   const [category, setCategory] = useState("");
   const [level, setLevel] = useState("");
@@ -10,12 +10,14 @@ function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newGame = {
+    const fields = {
       word,
       category,
       level,
     };
-    console.log(newGame);
+    await axios.post(baseURL, { fields }, config);
+    props.setToggleFetch((curr) => !curr);
+    console.log(fields);
   };
 
   return (
@@ -23,12 +25,18 @@ function Form() {
       <h4> Create Game:</h4>
       <label> Word:</label>
       <input value={word} onChange={(e) => setWord(e.target.value)} />
+      <br />
       <label> Category:</label>
       <input value={category} onChange={(e) => setCategory(e.target.value)} />
+      <br />
       <label> Choose a Level:</label>
-      <button onClick={setLevel("easy")}>Easy</button>
-      <button onClick={setLevel("medium")}>Medium</button>
-      <button onClick={setLevel("medium")}>Hard</button>
+      <br />
+      <select value={level} onChange={(e) => setLevel(e.target.value)}>
+        <option value={"easy"}>Easy</option>
+        <option value={"medium"}>Medium</option>
+        <option value={"hard"}>Hard</option>
+      </select>
+      <button>Submit</button>
     </form>
   );
 }

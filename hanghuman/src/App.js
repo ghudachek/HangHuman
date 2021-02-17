@@ -10,6 +10,7 @@ import Form from "./components/form";
 function App() {
   const [data, setData] = useState();
   const [games, setGames] = useState();
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -19,15 +20,16 @@ function App() {
       setData(resp.data.records);
     };
     getData();
-  }, []);
+  }, [toggleFetch]);
 
   return (
     <div className="App">
-      <Route path="/">
+      <Route exact path="/">
         <Header />
       </Route>
-      <Route path="/form">
-        <Form />
+      <Route exact path="/form">
+        <Form setToggleFetch={setToggleFetch} />
+        <Link to="/">Home</Link>
       </Route>
       <Route exact path="/easy/:easy">
         {games ? <Levels games={games} /> : null}
