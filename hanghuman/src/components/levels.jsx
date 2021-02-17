@@ -89,11 +89,7 @@ function Levels(props) {
     <div>
       <Link to="/">Home</Link>
       <h3>Category:{category}</h3>
-
       <p>Answer:</p>
-      {rightLetters.map((ele) => (
-        <button>{ele}</button>
-      ))}
       <p>{guess}</p>
       <Alphabet selectedWord={selectedWord} guess={guess} />
     </div>

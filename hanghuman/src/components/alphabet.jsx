@@ -29,7 +29,7 @@ function Alphabet(props) {
     "y",
     "z",
   ];
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(false); //disables all buttons instead of just one..
   let answers = props.selectedWord.split(""); // gives each letter in an array for word
   alphabet.map((letter) => {
     if (answers.includes(letter) === false) {
