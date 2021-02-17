@@ -5,13 +5,13 @@ function Header() {
       <div>
         <h3>Choose a Level:</h3>
         <button>
-          <Link to="/level/easy">Easy</Link>
+          <Link to="/:easy">Easy</Link>
         </button>
         <button>
-          <Link to="/level/medium">Medium</Link>
+          <Link to="/:medium">Medium</Link>
         </button>
         <button>
-          <Link to="/level/hard">Hard</Link>
+          <Link to="/:hard">Hard</Link>
         </button>
       </div>
     </div>

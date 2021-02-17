@@ -7,11 +7,13 @@ import Levels from "./components/levels";
 import Header from "./components/header";
 function App() {
   const [data, setData] = useState();
+  const [games, setGames] = useState();
 
   useEffect(() => {
     const getData = async () => {
       const resp = await axios.get(baseURL, config);
-      console.log(resp.data.records);
+      setGames(resp.data.records.map((element) => element.fields));
+      //console.log(resp.data.records);
       setData(resp.data.records);
     };
     getData();
@@ -19,7 +21,10 @@ function App() {
 
   return (
     <div className="App">
-      <Levels />
+      <Header />
+      <Route exact path="/:easy">
+        {games ? <Levels games={games} /> : null}
+      </Route>
     </div>
   );
 }

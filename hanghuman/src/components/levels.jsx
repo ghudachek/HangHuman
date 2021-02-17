@@ -1,41 +1,31 @@
-import { baseURL, config } from "../services";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-
-function Levels() {
+import Alphabet from "./alphabet";
+import { useParams } from "react-router-dom";
+function Levels(props) {
   let hard = [];
   let med = [];
   let easy = [];
-  let games = [];
-
-  useEffect(() => {
-    const getLevels = async () => {
-      const resp = await axios.get(baseURL, config);
-      games = resp.data.records.map((element) => element.fields);
-      //console.log(games);
-      function placeGames() {
-        if (games !== []) {
-          console.log(games);
-          games.map((ele) => {
-            if (ele.level.toString("") === "easy") {
-              return easy.push(ele);
-            } else if (ele.level.toString("") === "medium") {
-              med.push(ele);
-            } else if (ele.level.toString("") === "hard") {
-              hard.push(ele);
-            }
-          });
-        }
-      }
-      placeGames();
-    };
-    getLevels();
-  }, []);
-
+  let guess = "";
+  const params = useParams();
+  let key = Object.keys(params);
+  console.log(key);
+  //console.log(props.games);
+  props.games.map((ele) => {
+    if (ele.level.toString("") === "easy") {
+      return easy.push(ele);
+    } else if (ele.level.toString("") === "medium") {
+      med.push(ele);
+    } else if (ele.level.toString("") === "hard") {
+      hard.push(ele);
+    }
+  });
+  for (let i = 0; i < easy[0].word.length; i++) {
+    guess += "___  ";
+  }
   return (
     <div>
-      <p>under construction...</p>
+      <h1>Category: {easy[0].category}</h1>
+      <p>{guess}</p>
+      <Alphabet />
     </div>
   );
 }
