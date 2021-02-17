@@ -5,11 +5,11 @@ import { baseURL, config } from "./services";
 import axios from "axios";
 import Levels from "./components/levels";
 import Header from "./components/header";
+import Form from "./components/form";
+
 function App() {
   const [data, setData] = useState();
   const [games, setGames] = useState();
-  const [correctLetters, setCorrectLetters] = useState();
-  const [wrongLetters, setWrongLetters] = useState();
 
   useEffect(() => {
     const getData = async () => {
@@ -23,10 +23,12 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/">
+      <Route path="/">
         <Header />
       </Route>
-
+      <Route path="/form">
+        <Form />
+      </Route>
       <Route exact path="/easy/:easy">
         {games ? <Levels games={games} /> : null}
       </Route>
