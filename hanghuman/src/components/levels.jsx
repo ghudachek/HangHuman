@@ -34,7 +34,7 @@ function Levels(props) {
   let hard = [];
   let med = [];
   let easy = [];
-  let guess = "";
+  let guess = [];
   const params = useParams();
   let key = Object.keys(params);
   let wrongLetters = [];
@@ -61,7 +61,7 @@ function Levels(props) {
     selectedWord = selected.word;
     category = selected.category;
     for (let i = 0; i < selectedWord.length; i++) {
-      guess += "___  ";
+      guess.push("____  ");
     }
     selectedWord.split("").map((letter) => rightLetters.push(letter));
   } else if (key.toString("") === "medium") {
@@ -69,15 +69,16 @@ function Levels(props) {
     selectedWord = selected.word;
     category = selected.category;
     for (let i = 0; i < selectedWord.length; i++) {
-      guess += "___  ";
+      guess.push("____  ");
     }
+    console.log(guess);
     selectedWord.split("").map((letter) => rightLetters.push(letter));
   } else if (key.toString("") === "hard") {
     selected = hard[Math.floor(Math.random() * hard.length)];
     selectedWord = selected.word;
     category = selected.category;
     for (let i = 0; i < selectedWord.length; i++) {
-      guess += "___  ";
+      guess.push("____  ");
     }
     selectedWord.split("").map((letter) => rightLetters.push(letter));
   } else {
@@ -88,8 +89,13 @@ function Levels(props) {
     <div>
       <Link to="/">Home</Link>
       <h3>Category:{category}</h3>
+
+      <p>Answer:</p>
+      {rightLetters.map((ele) => (
+        <button>{ele}</button>
+      ))}
       <p>{guess}</p>
-      <Alphabet />
+      <Alphabet selectedWord={selectedWord} guess={guess} />
     </div>
   );
 }

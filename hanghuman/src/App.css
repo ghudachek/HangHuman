@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+.button-off {
+  color: red;
+}
+.button-on {
+  color: green;
+}

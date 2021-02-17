@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <Link to="form">Create Your Own Level</Link>
+      <Link to="/form">Create Your Own Level</Link>
 
       <h3>Choose a Level:</h3>
       <Link to="/easy/:easy">Easy</Link>

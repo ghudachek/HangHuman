@@ -1,4 +1,6 @@
-function Alphabet() {
+import { useState } from "react";
+function Alphabet(props) {
+  let incorrect = [];
   const alphabet = [
     "a",
     "b",
@@ -27,9 +29,29 @@ function Alphabet() {
     "y",
     "z",
   ];
+  const [disabled, setDisabled] = useState(false);
+  let answers = props.selectedWord.split(""); // gives each letter in an array for word
+  alphabet.map((letter) => {
+    if (answers.includes(letter) === false) {
+      incorrect.push(letter);
+    }
+  });
+  console.log(incorrect);
 
   return alphabet.map((letter) => (
-    <button key={letter}>{letter.toUpperCase()}</button>
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        console.log(letter);
+        console.log(incorrect.includes(letter));
+        if (incorrect.includes(letter) === false) {
+          console.log(answers.indexOf(letter));
+        }
+      }}
+      key={letter}
+    >
+      {letter.toUpperCase()}
+    </button>
   ));
 }
 export default Alphabet;
