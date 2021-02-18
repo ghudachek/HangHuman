@@ -2,6 +2,7 @@ import React from "react";
 import "./stickFigure.css";
 
 const stickFigure = () => {
+  //<i className="fas fa-umbrella"></i>
   return (
     <div className="wrapper">
       <link
@@ -10,7 +11,6 @@ const stickFigure = () => {
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
         crossorigin="anonymous"
       ></link>
-      <i className="fas fa-umbrella"></i>
       <div className="head"></div>
       <div className="eye"></div>
       <div className="eyeRight"></div>

@@ -2,14 +2,21 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <Link to="/form">Create Your Own Level</Link>
+      <button>
+        <Link to="/form">Create Your Own Level</Link>
+      </button>
 
       <h3>Choose a Level:</h3>
-      <Link to="/easy/:easy">Easy</Link>
+      <button>
+        <Link to="/easy/:easy">Easy</Link>
+      </button>
+      <button>
+        <Link to="/medium/:medium">Medium</Link>
+      </button>
 
-      <Link to="/medium/:medium">Medium</Link>
-
-      <Link to="/hard/:hard">Hard</Link>
+      <button>
+        <Link to="/hard/:hard">Hard</Link>
+      </button>
     </div>
   );
 }

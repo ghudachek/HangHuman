@@ -9,16 +9,17 @@ import Form from "./components/form";
 import StickFigure from "./components/stickFigure";
 
 function App() {
-  const [data, setData] = useState();
+  //const [data, setData] = useState();
   const [games, setGames] = useState();
   const [toggleFetch, setToggleFetch] = useState(false);
-
   useEffect(() => {
     const getData = async () => {
+      console.log("running api grab");
       const resp = await axios.get(baseURL, config);
-      setGames(resp.data.records.map((element) => element.fields));
-      //console.log(resp.data.records);
-      setData(resp.data.records);
+      // setGames(resp.data.records.map((element) => element.fields));
+      setGames(resp.data);
+      console.log(games);
+      //setData(resp.data.records);
     };
     getData();
   }, [toggleFetch]);
