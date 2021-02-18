@@ -1,43 +1,15 @@
 import Alphabet from "./alphabet";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 function Levels(props) {
-  const alphabet = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-
   let hard = [];
   let med = [];
   let easy = [];
   let guess = [];
+  const [guesses, setGuesses] = useState([]);
   const params = useParams();
   let key = Object.keys(params);
-  let wrongLetters = [];
   let rightLetters = [];
   let selectedWord = null;
   let category = null;
@@ -54,7 +26,7 @@ function Levels(props) {
       hard.push(ele);
     }
   });
-  console.log(key);
+  //console.log(key);
   if (key.toString("") === "easy") {
     console.log("easy switch is running");
     selected = easy[Math.floor(Math.random() * easy.length)];
@@ -71,11 +43,13 @@ function Levels(props) {
     for (let i = 0; i < selectedWord.length; i++) {
       guess.push("____  ");
     }
-    console.log(guess);
+    //console.log(guess);
+    console.log(selectedWord);
     selectedWord.split("").map((letter) => rightLetters.push(letter));
   } else if (key.toString("") === "hard") {
     selected = hard[Math.floor(Math.random() * hard.length)];
     selectedWord = selected.word;
+
     category = selected.category;
     for (let i = 0; i < selectedWord.length; i++) {
       guess.push("____  ");
@@ -90,6 +64,11 @@ function Levels(props) {
       <Link to="/">Home</Link>
       <h3>Category:{category}</h3>
       <p>Answer:</p>
+      {selectedWord.split().map((letter) => (
+        <span key={letter} style={{ visibility: "hidden" }}>
+          {letter}
+        </span>
+      ))}
       <p>{guess}</p>
       <Alphabet selectedWord={selectedWord} guess={guess} />
     </div>

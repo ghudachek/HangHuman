@@ -36,7 +36,9 @@ function Alphabet(props) {
       incorrect.push(letter);
     }
   });
-  console.log(incorrect);
+  //console.log(incorrect);
+  let indicies = [];
+  ///grab all insidences of a letter in selctedWord...
 
   return alphabet.map((letter) => (
     <button
@@ -46,6 +48,13 @@ function Alphabet(props) {
         console.log(incorrect.includes(letter));
         if (incorrect.includes(letter) === false) {
           console.log(answers.indexOf(letter));
+          for (let i = 0; i < props.selectedWord.length; i++) {
+            if (props.selectedWord[i] === letter) {
+              props.guess[i] = props.selectedWord[i];
+              console.log(props.guess);
+            }
+          }
+          return props.guess;
         }
       }}
       key={letter}
