@@ -9,7 +9,7 @@ function WinLose(props) {
   //   if (wrong === 5) {
   //     //alert you lose!
   //     //show word
-  //   } else if (selectedWord === guess) {
+  //   } else if (props.selectedWord === props.guess) {
   //     //alert You WIn!
   //     //show word..
   //   }

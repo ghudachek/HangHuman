@@ -9,19 +9,8 @@ const Button = (props) => {
       disabled={disabled}
       onClick={(e) => {
         e.preventDefault();
-        //console.log(props.letter);
-        //console.log(props.incorrect.includes(props.letter));
         if (props.incorrect.includes(props.letter) === false) {
-          console.log(props.answers.indexOf(props.letter));
-
-          //changes guess but not updating..
-          for (let i = 0; i < props.selectedWord.length; i++) {
-            if (props.selectedWord[i] === props.letter) {
-              props.guess[i] = props.selectedWord[i];
-              console.log(props.guess);
-            }
-          }
-          return props.guess;
+          props.correctAnswers(props.letter);
         } else {
           setDisabled(true);
         }

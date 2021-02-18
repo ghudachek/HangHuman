@@ -7,7 +7,7 @@ import Levels from "./components/levels";
 import Header from "./components/header";
 import Form from "./components/form";
 import StickFigure from "./components/stickFigure";
-import WinLose from "./components/winlose";
+//import WinLose from "./components/winlose";
 
 function App() {
   const [games, setGames] = useState();
@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
-        <WinLose />
         <Header />
         <StickFigure />
       </Route>

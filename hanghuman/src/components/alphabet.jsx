@@ -46,6 +46,7 @@ function Alphabet(props) {
       incorrect={incorrect}
       answers={answers}
       guess={props.guess}
+      correctAnswers={props.correctAnswers}
     />
   ));
 }

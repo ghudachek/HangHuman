@@ -3,40 +3,56 @@ import Alphabet from "./alphabet";
 import { useState, useEffect } from "react";
 
 const CreateGame = (props) => {
-  let newGuess = [];
-  const [guess, setGuess] = useState([]);
-  let news = [];
-  const [selected, setSelected] = useState();
+  const [guess, setGuess] = useState();
+  const [selected, setSelected] = useState([]);
   const [selectedWord, setSelectedWord] = useState("");
-  let rightLetters = [];
-  let category = "";
-  news = props.level[Math.floor(Math.random() * props.level.length)];
-  useEffect(() => {
-    if (news) {
-      console.log(news);
-      setSelected(news);
-      setSelectedWord(selected.word);
+  const [toggleFetch, setToggleFetch] = useState(false);
+  const [category, setCategory] = useState("");
+  const [] = useState();
+  let newGuess = [];
+  let holder = guess;
 
-      for (let i = 0; i < selectedWord.length; i++) {
+  if (toggleFetch === false) {
+    setToggleFetch(true);
+  }
+
+  useEffect(() => {
+    if (props.level.word) {
+      setSelectedWord(props.level.word);
+      setCategory(props.level.category);
+
+      for (let i = 0; i < props.level.word.length; i++) {
         newGuess.push("____  ");
       }
       setGuess(newGuess);
-      category = selected.category;
-      selectedWord.split("").map((letter) => rightLetters.push(letter));
     }
-  }, [news]);
+  }, [props.level]);
+
+  function correctAnswers(letter) {
+    for (let i = 0; i < selectedWord.length; i++) {
+      if (selectedWord[i] === letter) {
+        holder[i] = selectedWord[i];
+        console.log(holder);
+      }
+    }
+    setGuess(holder);
+    console.log(guess); //changes!
+  }
 
   return (
     <div>
-      <h3>Category:{category}</h3>
-      <p>Answer:</p>
-      {selectedWord.split().map((letter) => (
-        <span key={letter} style={{ visibility: "visible" }}>
-          {letter}
-        </span>
-      ))}
-      <p>{guess}</p>
-      <Alphabet selectedWord={selectedWord} guess={guess} />
+      {props.level.word ? (
+        <div>
+          <h3>Category:{category}</h3>
+          <p>Answer:</p>
+          <p>{guess}</p>
+        </div>
+      ) : null}
+      <Alphabet
+        selectedWord={selectedWord}
+        guess={guess}
+        correctAnswers={correctAnswers}
+      />
     </div>
   );
 };
