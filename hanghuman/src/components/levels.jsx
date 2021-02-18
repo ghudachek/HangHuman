@@ -15,19 +15,21 @@ function Levels(props) {
   let key = Object.keys(params);
 
   let newGames = props.games.records.map((element) => element.fields);
-  console.log(newGames);
+  //console.log(newGames);
   //takes API and returns three categories of levels..
 
-  newGames.map((ele) => {
-    if (ele.level.toString("") === "easy") {
-      easy.push(ele);
-    } else if (ele.level.toString("") === "medium") {
-      med.push(ele);
-    } else if (ele.level.toString("") === "hard") {
-      hard.push(ele);
-    }
-    //set();
-  });
+  useEffect(() => {
+    newGames.map((ele) => {
+      if (ele.level.toString("") === "easy") {
+        easy.push(ele);
+      } else if (ele.level.toString("") === "medium") {
+        med.push(ele);
+      } else if (ele.level.toString("") === "hard") {
+        hard.push(ele);
+      }
+      set();
+    });
+  }, []);
 
   function set() {
     setEasyLvl(easy);
@@ -38,13 +40,9 @@ function Levels(props) {
   return (
     <div>
       <Link to="/">Home</Link>
-      {key.toString("") === "easy" ? <CreateGame level={easy} /> : null}
-      {key.toString("") === "medium" ? <CreateGame level={med} /> : null}
-      {key.toString("") === "hard" ? (
-        <CreateGame level={hard} />
-      ) : (
-        console.log("none match")
-      )}
+      {key.toString("") === "easy" ? <CreateGame level={easyLvl} /> : null}
+      {key.toString("") === "medium" ? <CreateGame level={medLvl} /> : null}
+      {key.toString("") === "hard" ? <CreateGame level={hardLvl} /> : null}
     </div>
   );
 }

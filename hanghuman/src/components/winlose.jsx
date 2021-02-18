@@ -1,7 +1,26 @@
-function playGame(props) {}
-//give a limited amount of wrong answers..
-//check wrong answers everytime button is clicked.
-//when reach wrong answer limit show alert 'You Lost'
-//check for word completion --selectedWord === guess?
-//if they = then give 'You won' alert
-export default playGame;
+import { useState } from "react";
+import Alert from "react-bootstrap/Alert";
+function WinLose(props) {
+  //give a limited amount of wrong answers..
+  const [wrong, setWrong] = useState(0);
+
+  //check wrong answers everytime button is clicked.
+  // function checkWrong() {
+  //   if (wrong === 5) {
+  //     //alert you lose!
+  //     //show word
+  //   } else if (selectedWord === guess) {
+  //     //alert You WIn!
+  //     //show word..
+  //   }
+  // }
+
+  return (
+    <Alert varient="danger">
+      <Alert.Heading>YOU LOSE</Alert.Heading>
+      <p>add animation within...</p>
+    </Alert>
+  );
+}
+
+export default WinLose;

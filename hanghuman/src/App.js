@@ -7,9 +7,9 @@ import Levels from "./components/levels";
 import Header from "./components/header";
 import Form from "./components/form";
 import StickFigure from "./components/stickFigure";
+import WinLose from "./components/winlose";
 
 function App() {
-  //const [data, setData] = useState();
   const [games, setGames] = useState();
   const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
@@ -18,8 +18,6 @@ function App() {
       const resp = await axios.get(baseURL, config);
       // setGames(resp.data.records.map((element) => element.fields));
       setGames(resp.data);
-      console.log(games);
-      //setData(resp.data.records);
     };
     getData();
   }, [toggleFetch]);
@@ -27,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/">
+        <WinLose />
         <Header />
         <StickFigure />
       </Route>
