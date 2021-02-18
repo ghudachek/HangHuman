@@ -1,4 +1,4 @@
-import { useState } from "react";
+import Button from "./button";
 function Alphabet(props) {
   let incorrect = [];
   const alphabet = [
@@ -29,7 +29,8 @@ function Alphabet(props) {
     "y",
     "z",
   ];
-  const [disabled, setDisabled] = useState(false); //disables all buttons instead of just one..
+  //create two categories? one for disabled letters one for abled..? and add buttons to it when clicked
+
   let answers = props.selectedWord.split(""); // gives each letter in an array for word
   alphabet.map((letter) => {
     if (answers.includes(letter) === false) {
@@ -37,30 +38,15 @@ function Alphabet(props) {
     }
   });
   //console.log(incorrect);
-  let indicies = [];
-  ///grab all insidences of a letter in selctedWord...
 
   return alphabet.map((letter) => (
-    <button
-      onClick={(e) => {
-        e.preventDefault();
-        console.log(letter);
-        console.log(incorrect.includes(letter));
-        if (incorrect.includes(letter) === false) {
-          console.log(answers.indexOf(letter));
-          for (let i = 0; i < props.selectedWord.length; i++) {
-            if (props.selectedWord[i] === letter) {
-              props.guess[i] = props.selectedWord[i];
-              console.log(props.guess);
-            }
-          }
-          return props.guess;
-        }
-      }}
-      key={letter}
-    >
-      {letter.toUpperCase()}
-    </button>
+    <Button
+      selectedWord={props.selectedWord}
+      letter={letter}
+      incorrect={incorrect}
+      answers={answers}
+      guess={props.guess}
+    />
   ));
 }
 export default Alphabet;
