@@ -12,10 +12,9 @@ const stickFigure2 = () => {
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
         crossOrigin="anonymous"
       ></link>
-      <div className="cloud">
-        <img className="img-cloud" src={cloud}></img>
-      </div>
-
+      <div className="pole"></div>
+      <rect className="noose"></rect>
+      <div className="bottom"></div>
       <div className="head"></div>
       <div className="eye"></div>
       <div className="eyeRight"></div>

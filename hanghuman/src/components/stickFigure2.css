@@ -1,12 +1,32 @@
-.cloud {
-  border-radius: 40%;
-  width: 10%;
+.bottom {
+  width: 150px;
+  border: 5px solid black;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 200px;
+  top: 680px;
 }
-.img-cloud {
-  width: 80%;
+.pole {
+  height: 350px;
+  border: 5px solid black;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 265px;
+  top: 320px;
 }
-
+.noose {
+  width: 90px;
+  border: 5px solid black;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 265px;
+  top: 320px;
+}
 .head {
+  visibility: hidden;
   width: 70px;
   height: 70px;
   border: 5px solid black;
@@ -19,6 +39,7 @@
   transform-origin: center bottom;
 }
 .eye {
+  visibility: hidden;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -30,6 +51,7 @@
   left: 350px;
 }
 .eyeRight {
+  visibility: hidden;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -40,20 +62,22 @@
   left: 380px;
 }
 .arc {
+  visibility: hidden;
   width: 35px;
   height: 10px;
   border-radius: 50%;
-  border-right: 1px solid white;
+  border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  border-top: 1px solid white;
+  border-top: 1px solid black;
   display: block;
   position: absolute;
-  top: 365px;
+  top: 370px;
   left: 350px;
 }
 
 .torso {
+  visibility: hidden;
   height: 90px;
   border: 7px solid black;
   display: block;
@@ -63,6 +87,7 @@
 }
 
 .leftleg {
+  visibility: hidden;
   height: 150px;
   border: 3px solid black;
   fill: black;
@@ -73,14 +98,8 @@
   transform: rotate(12deg);
   transform-origin: top;
 }
-.fa-umbrella {
-  font-size: 200px;
-  text-align: left;
-  color: black;
-  top: 0px;
-  transform: rotate(20deg);
-}
 .rightleg {
+  visibility: hidden;
   height: 150px;
   border: 3px solid black;
   fill: black;
@@ -93,6 +112,7 @@
 }
 
 .leftarm {
+  visibility: hidden;
   width: 100px;
   border: 3px solid black;
   display: block;
@@ -103,6 +123,7 @@
   transform-origin: top;
 }
 .rightarmupper {
+  visibility: hidden;
   width: 70px;
   border: 3px solid black;
   display: block;
@@ -113,6 +134,7 @@
   transform-origin: top;
 }
 .rightarm {
+  visibility: hidden;
   width: 50px;
   border: 3px solid black;
   display: block;

@@ -29,8 +29,8 @@ function App() {
         <Header />
       </Route>
       <Route exact path="/form">
-        <Form setToggleFetch={setToggleFetch} />
         <Link to="/">Home</Link>
+        <Form setToggleFetch={setToggleFetch} />
       </Route>
       <Route exact path="/easy/:easy">
         {games ? <Levels games={games} /> : null}
