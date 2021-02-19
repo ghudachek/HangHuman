@@ -1,7 +1,8 @@
 import React from "react";
 import "./stickFigure2.css";
+import cloud from "./cloud-outline.png";
 
-const stickFigure = () => {
+const stickFigure2 = () => {
   //<i className="fas fa-umbrella"></i>
   return (
     <div className="wrapper">
@@ -11,8 +12,11 @@ const stickFigure = () => {
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
         crossOrigin="anonymous"
       ></link>
-      <div className="head"></div>
+      <div className="cloud">
+        <img className="img-cloud" src={cloud}></img>
+      </div>
 
+      <div className="head"></div>
       <div className="eye"></div>
       <div className="eyeRight"></div>
       <div className="arc"></div>
@@ -28,4 +32,4 @@ const stickFigure = () => {
   );
 };
 
-export default stickFigure;
+export default stickFigure2;

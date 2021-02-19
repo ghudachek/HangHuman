@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
+      <div className="header">
+        <h1>HANG-HUMAN</h1>
+        <h3>~The Gender-Inclusive Hangman~</h3>
+      </div>
+
       <button>
         <Link to="/form">Create Your Own Level</Link>
       </button>

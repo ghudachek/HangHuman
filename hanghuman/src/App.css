@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  background-color: #fffcf7;
 }
-.button-off {
-  color: red;
+button {
+  color: white;
+  background-color: blue;
 }
-.button-on {
-  color: green;
+a:visited {
+  color: white;
+  background-color: #a1b5d8;
+}
+.header {
+  background-color: #a1b5d8;
 }

@@ -15,6 +15,7 @@ function Levels(props) {
   let key = Object.keys(params);
   const [toggleFetch, setToggleFetch] = useState(false);
   let newGames = props.games.records.map((element) => element.fields);
+
   //console.log(newGames);
   //takes API and returns three categories of levels..
   useEffect(() => {

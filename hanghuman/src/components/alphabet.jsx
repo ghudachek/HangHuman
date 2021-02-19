@@ -1,4 +1,5 @@
 import Button from "./button";
+
 function Alphabet(props) {
   let incorrect = [];
   const alphabet = [
@@ -41,11 +42,11 @@ function Alphabet(props) {
 
   return alphabet.map((letter) => (
     <Button
+      key={letter}
       selectedWord={props.selectedWord}
       letter={letter}
       incorrect={incorrect}
       answers={answers}
-      guess={props.guess}
       correctAnswers={props.correctAnswers}
     />
   ));

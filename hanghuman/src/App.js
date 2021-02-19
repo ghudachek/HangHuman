@@ -7,6 +7,7 @@ import Levels from "./components/levels";
 import Header from "./components/header";
 import Form from "./components/form";
 import StickFigure from "./components/stickFigure";
+import StickFigure2 from "./components/stickFigure2";
 //import WinLose from "./components/winlose";
 
 function App() {
@@ -26,7 +27,6 @@ function App() {
     <div className="App">
       <Route exact path="/">
         <Header />
-        <StickFigure />
       </Route>
       <Route exact path="/form">
         <Form setToggleFetch={setToggleFetch} />
@@ -34,13 +34,17 @@ function App() {
       </Route>
       <Route exact path="/easy/:easy">
         {games ? <Levels games={games} /> : null}
+        <StickFigure2 />
       </Route>
       <Route exact path="/medium/:medium">
         {games ? <Levels games={games} /> : null}
+        <StickFigure2 />
       </Route>
       <Route exact path="/hard/:hard">
         {games ? <Levels games={games} /> : null}
+        <StickFigure2 />
       </Route>
+      <StickFigure />
     </div>
   );
 }
