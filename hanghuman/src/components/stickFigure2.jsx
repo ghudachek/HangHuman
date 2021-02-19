@@ -6,7 +6,7 @@ const stickFigure2 = () => {
   return (
     <div className="wrapper">
       <div className="pole"></div>
-      <rect className="noose"></rect>
+      <div className="noose"></div>
       <div className="bottom"></div>
       <div className="head" style={{ visibility: { style } }}></div>
       <div className="eye" style={{ visibility: { style } }}></div>

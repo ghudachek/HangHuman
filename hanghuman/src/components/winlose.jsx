@@ -5,6 +5,10 @@ function WinLose(props) {
   const [wrong, setWrong] = useState(0);
   const [visiblity, setVisibility] = useState(false);
 
+  const increment = () => {
+    setWrong(wrong + 1);
+  };
+  console.log(wrong);
   //check wrong answers everytime button is clicked.
   // function checkWrong() {
   //   if (wrong === 5) {

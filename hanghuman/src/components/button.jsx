@@ -8,7 +8,7 @@ const Button = (props) => {
   const increment = () => {
     setWrong(wrong + 1);
   };
-
+  console.log(wrong);
   return (
     <button
       className="game-btn"
@@ -22,7 +22,6 @@ const Button = (props) => {
           setDisabled(true);
           increment();
         }
-        console.log(wrong);
       }}
       key={props.letter}
     >
