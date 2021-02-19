@@ -3,7 +3,7 @@ import Alphabet from "./alphabet";
 import { useState, useEffect } from "react";
 
 const CreateGame = (props) => {
-  const [guess, setGuess] = useState();
+  const [guess, setGuess] = useState([]);
   const [selectedWord, setSelectedWord] = useState("");
   const [toggleFetch, setToggleFetch] = useState(false);
   const [category, setCategory] = useState("");
@@ -16,7 +16,7 @@ const CreateGame = (props) => {
       setSelectedWord(props.level.word);
       setCategory(props.level.category);
 
-      if (guess === undefined) {
+      if (guess.length === 0) {
         for (let i = 0; i < props.level.word.length; i++) {
           newGuess.push("____  ");
         }
@@ -29,21 +29,30 @@ const CreateGame = (props) => {
   function correctAnswers(letter) {
     for (let i = 0; i < selectedWord.length; i++) {
       if (selectedWord[i] === letter) {
-        holder[i] = selectedWord[i];
-        console.log(holder);
+        guess[i] = selectedWord[i];
+        setGuess(
+          guess.map((line, index) => {
+            if (i === index) {
+              return selectedWord[i];
+            } else {
+              return line;
+            }
+          })
+        );
       }
     }
-    setGuess(holder);
-    console.log(guess); //changes!
   }
+
+  //console.log(guess); updates
 
   return (
     <div>
       <div>
         <h3>Category:{category}</h3>
         <p>Answer:</p>
-        <p>{guess}</p>
-        <p style={{ visibility: "hidden" }}>{selectedWord}</p>
+        {guess.map((line) => (
+          <span>{line}</span>
+        ))}
       </div>
 
       <Alphabet selectedWord={selectedWord} correctAnswers={correctAnswers} />

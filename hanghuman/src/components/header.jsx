@@ -5,11 +5,8 @@ function Header() {
       <div className="header">
         <h1>HANG-HUMAN</h1>
         <h3>~The Gender-Inclusive Hangman~</h3>
-      </div>
-
-      <button>
         <Link to="/form">Create Your Own Level</Link>
-      </button>
+      </div>
 
       <h3>Choose a Level:</h3>
       <button>

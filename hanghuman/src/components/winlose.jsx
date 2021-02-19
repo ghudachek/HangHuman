@@ -3,6 +3,7 @@ import Alert from "react-bootstrap/Alert";
 function WinLose(props) {
   //give a limited amount of wrong answers..
   const [wrong, setWrong] = useState(0);
+  const [visiblity, setVisibility] = useState(false);
 
   //check wrong answers everytime button is clicked.
   // function checkWrong() {

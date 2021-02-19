@@ -33,14 +33,17 @@ function App() {
         <Form setToggleFetch={setToggleFetch} />
       </Route>
       <Route exact path="/easy/:easy">
+        <Link to="/">Home</Link>
         {games ? <Levels games={games} /> : null}
         <StickFigure2 />
       </Route>
       <Route exact path="/medium/:medium">
+        <Link to="/">Home</Link>
         {games ? <Levels games={games} /> : null}
         <StickFigure2 />
       </Route>
       <Route exact path="/hard/:hard">
+        <Link to="/">Home</Link>
         {games ? <Levels games={games} /> : null}
         <StickFigure2 />
       </Route>
