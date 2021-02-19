@@ -1,5 +1,6 @@
 import React from "react";
 import Alphabet from "./alphabet";
+
 import { useState, useEffect } from "react";
 
 const CreateGame = (props) => {
@@ -16,15 +17,12 @@ const CreateGame = (props) => {
       setSelectedWord(props.level.word);
       setCategory(props.level.category);
 
-      if (guess.length === 0) {
-        for (let i = 0; i < props.level.word.length; i++) {
-          newGuess.push("____  ");
-        }
-        setGuess(newGuess);
-      } else {
+      for (let i = 0; i < props.level.word.length; i++) {
+        newGuess.push("____  ");
       }
+      setGuess(newGuess);
     }
-  }, [props.level]);
+  }, [props.level, props.restart]);
 
   function correctAnswers(letter) {
     for (let i = 0; i < selectedWord.length; i++) {
@@ -40,6 +38,14 @@ const CreateGame = (props) => {
           })
         );
       }
+    }
+    won();
+  }
+
+  function won() {
+    if (guess.join("") === selectedWord) {
+      alert("You Won!!");
+      console.log("you won");
     }
   }
 

@@ -1,4 +1,3 @@
-import Alphabet from "./alphabet";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -15,8 +14,7 @@ function Levels(props) {
   let key = Object.keys(params);
   const [toggleFetch, setToggleFetch] = useState(false);
   let newGames = props.games.records.map((element) => element.fields);
-
-  //console.log(newGames);
+  const [restart, setRestart] = useState(false);
   //takes API and returns three categories of levels..
   useEffect(() => {
     newGames.map((ele) => {
@@ -29,25 +27,44 @@ function Levels(props) {
       }
       set();
     });
-  }, []);
+  }, [restart]);
 
   function set() {
     setEasyLvl(easy[Math.floor(Math.random() * easy.length)]);
     setMedLvl(med[Math.floor(Math.random() * med.length)]);
     setHardLvl(hard[Math.floor(Math.random() * hard.length)]);
   }
-  console.log(easyLvl); //shows data..as object
+
   return (
     <div>
-      <Link to="/">Home</Link>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          setRestart((curr) => !curr);
+        }}
+      >
+        Restart
+      </button>
       {key.toString("") === "easy" ? (
-        <CreateGame level={easyLvl} toggleFetch={toggleFetch} />
+        <CreateGame
+          level={easyLvl}
+          toggleFetch={toggleFetch}
+          restart={restart}
+        />
       ) : null}
       {key.toString("") === "medium" ? (
-        <CreateGame level={medLvl} toggleFetch={toggleFetch} />
+        <CreateGame
+          level={medLvl}
+          toggleFetch={toggleFetch}
+          restart={restart}
+        />
       ) : null}
       {key.toString("") === "hard" ? (
-        <CreateGame level={hardLvl} toggleFetch={toggleFetch} />
+        <CreateGame
+          level={hardLvl}
+          toggleFetch={toggleFetch}
+          restart={restart}
+        />
       ) : null}
     </div>
   );

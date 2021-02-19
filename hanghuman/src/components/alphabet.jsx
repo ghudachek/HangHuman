@@ -1,5 +1,6 @@
 import Button from "./button";
 import StickFigure2 from "./stickFigure2";
+import WinLose from "./winlose";
 import { useState, useEffect } from "react";
 
 function Alphabet(props) {
@@ -46,21 +47,26 @@ function Alphabet(props) {
   function decrement() {
     setIncorrect(incorrect + 1);
   }
-  console.log("letters left in incorrect:" + incorrect);
 
-  return alphabet.map((letter) => (
+  return (
     <div>
-      <Button
-        key={letter}
-        selectedWord={props.selectedWord}
-        letter={letter}
-        incorrect={incorrectLet}
-        decrement={decrement}
-        answers={answers}
-        correctAnswers={props.correctAnswers}
-      />
+      <div className="buttons">
+        {alphabet.map((letter) => (
+          <Button
+            key={letter}
+            selectedWord={props.selectedWord}
+            letter={letter}
+            incorrect={incorrectLet}
+            decrement={decrement}
+            answers={answers}
+            correctAnswers={props.correctAnswers}
+            lost={props.lost}
+          />
+        ))}
+      </div>
+      <WinLose incorrect={incorrect} />
       <StickFigure2 incorrect={incorrect} />
     </div>
-  ));
+  );
 }
 export default Alphabet;
