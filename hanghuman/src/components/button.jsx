@@ -3,12 +3,7 @@ import { useState, useEffect } from "react";
 
 const Button = (props) => {
   const [disabled, setDisabled] = useState(false);
-  const [wrong, setWrong] = useState(0);
 
-  const increment = () => {
-    setWrong(wrong + 1);
-  };
-  console.log(wrong);
   return (
     <button
       className="game-btn"
@@ -20,7 +15,7 @@ const Button = (props) => {
           setDisabled(true);
         } else {
           setDisabled(true);
-          increment();
+          props.decrement();
         }
       }}
       key={props.letter}

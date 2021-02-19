@@ -1,7 +1,9 @@
 import Button from "./button";
+import { useState, useEffect } from "react";
 
 function Alphabet(props) {
-  let incorrect = [];
+  let incorrectLet = [];
+  const [incorrect, setIncorrect] = useState(0);
   const alphabet = [
     "a",
     "b",
@@ -35,17 +37,28 @@ function Alphabet(props) {
   let answers = props.selectedWord.split(""); // gives each letter in an array for word
   alphabet.map((letter) => {
     if (answers.includes(letter) === false) {
-      incorrect.push(letter);
+      incorrectLet.push(letter);
     }
   });
-  //console.log(incorrect);
+  useEffect(() => {
+    console.log(incorrectLet); //gives all incorrect letters
+    if (incorrect === 0) {
+      setIncorrect(incorrectLet.length);
+    }
+  }, [incorrect]);
+
+  function decrement() {
+    setIncorrect(incorrect - 1);
+  }
+  console.log(incorrect);
 
   return alphabet.map((letter) => (
     <Button
       key={letter}
       selectedWord={props.selectedWord}
       letter={letter}
-      incorrect={incorrect}
+      incorrect={incorrectLet}
+      decrement={decrement}
       answers={answers}
       correctAnswers={props.correctAnswers}
     />
