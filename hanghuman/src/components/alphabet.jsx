@@ -1,4 +1,5 @@
 import Button from "./button";
+import StickFigure2 from "./stickFigure2";
 import { useState, useEffect } from "react";
 
 function Alphabet(props) {
@@ -32,36 +33,34 @@ function Alphabet(props) {
     "y",
     "z",
   ];
-  //create two categories? one for disabled letters one for abled..? and add buttons to it when clicked
 
-  let answers = props.selectedWord.split(""); // gives each letter in an array for word
+  //give incorrect letters and map how many are removed when letters clicked
+  let answers = props.selectedWord.split("");
+
   alphabet.map((letter) => {
     if (answers.includes(letter) === false) {
       incorrectLet.push(letter);
     }
   });
-  useEffect(() => {
-    console.log(incorrectLet); //gives all incorrect letters
-    if (incorrect === 0) {
-      setIncorrect(incorrectLet.length);
-    }
-  }, [incorrect]);
 
   function decrement() {
-    setIncorrect(incorrect - 1);
+    setIncorrect(incorrect + 1);
   }
-  console.log(incorrect);
+  console.log("letters left in incorrect:" + incorrect);
 
   return alphabet.map((letter) => (
-    <Button
-      key={letter}
-      selectedWord={props.selectedWord}
-      letter={letter}
-      incorrect={incorrectLet}
-      decrement={decrement}
-      answers={answers}
-      correctAnswers={props.correctAnswers}
-    />
+    <div>
+      <Button
+        key={letter}
+        selectedWord={props.selectedWord}
+        letter={letter}
+        incorrect={incorrectLet}
+        decrement={decrement}
+        answers={answers}
+        correctAnswers={props.correctAnswers}
+      />
+      <StickFigure2 incorrect={incorrect} />
+    </div>
   ));
 }
 export default Alphabet;
