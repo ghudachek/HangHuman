@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import StickFigure from "./stickFigure";
 function Header() {
   return (
     <div>
       <div className="header">
-        <h1>HANG-HUMAN</h1>
-        <h3>~The Gender-Inclusive Hangman~</h3>
+        <h2>HANG-HUMAN</h2>
+        <h4>~The Gender-Inclusive Hangman~</h4>
         <Link to="/form">Create Your Own Level</Link>
       </div>
 
@@ -19,6 +20,7 @@ function Header() {
       <button>
         <Link to="/hard/:hard">Hard</Link>
       </button>
+      <StickFigure />
     </div>
   );
 }

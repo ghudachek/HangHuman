@@ -1,19 +1,17 @@
+import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
-import "./App.css";
 import { baseURL, config } from "./services";
 import axios from "axios";
 import Levels from "./components/levels";
 import Header from "./components/header";
 import Form from "./components/form";
-import StickFigure from "./components/stickFigure";
 
 function App() {
   const [games, setGames] = useState();
   const [toggleFetch, setToggleFetch] = useState(false);
   useEffect(() => {
     const getData = async () => {
-      console.log("running api grab");
       const resp = await axios.get(baseURL, config);
 
       setGames(resp.data);
@@ -23,9 +21,13 @@ function App() {
 
   return (
     <div className="App">
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Truculenta:wght@100;500&display=swap"
+        rel="stylesheet"
+      />
       <Route exact path="/">
         <Header />
-        <StickFigure />
       </Route>
       <Route exact path="/form">
         <Link to="/">Home</Link>

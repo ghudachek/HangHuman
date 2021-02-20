@@ -1,29 +1,31 @@
 import React from "react";
 import Alphabet from "./alphabet";
-
 import { useState, useEffect } from "react";
 
 const CreateGame = (props) => {
   const [guess, setGuess] = useState([]);
   const [selectedWord, setSelectedWord] = useState("");
-  const [toggleFetch, setToggleFetch] = useState(false);
   const [category, setCategory] = useState("");
   const [] = useState();
   let newGuess = [];
-  let holder = guess;
 
+  console.log(props.level.word);
   useEffect(() => {
     if (props.level.word) {
       setSelectedWord(props.level.word);
       setCategory(props.level.category);
 
-      for (let i = 0; i < props.level.word.length; i++) {
-        newGuess.push("____  ");
+      if (guess.length === 0) {
+        for (let i = 0; i < props.level.word.length; i++) {
+          newGuess.push(" _ ");
+        }
       }
       setGuess(newGuess);
     }
-  }, [props.level, props.restart]);
+  }, [props.level]);
+  console.log(guess);
 
+  //checks for correct letters and updates lines when correct letter hits
   function correctAnswers(letter) {
     for (let i = 0; i < selectedWord.length; i++) {
       if (selectedWord[i] === letter) {
@@ -41,7 +43,7 @@ const CreateGame = (props) => {
     }
     won();
   }
-
+  console.log(guess);
   function won() {
     if (guess.join("") === selectedWord) {
       alert("You Won!!");

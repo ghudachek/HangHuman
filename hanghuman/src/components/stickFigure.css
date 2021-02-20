@@ -1,27 +1,18 @@
-.head {
-  width: 70px;
-  height: 70px;
-  border: 5px solid black;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 220px;
-  left: 133px;
-  z-index: 1;
-  transform-origin: center bottom;
-}
 .eye {
   width: 10px;
+  background-color: white;
   height: 10px;
   border-radius: 50%;
   display: block;
   position: absolute;
   border: 2px solid black;
+  z-index: 3;
   top: 20px;
   top: 245px;
   left: 150px;
 }
 .eyeRight {
+  background-color: white;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -30,21 +21,35 @@
   border: 2px solid black;
   top: 245px;
   left: 180px;
+  z-index: 3;
 }
 .arc {
   width: 35px;
   height: 10px;
   border-radius: 50%;
-  border-right: 1px solid white;
+  border-right: 1px solid transparent;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  border-top: 1px solid white;
+  border-top: 1px solid transparent;
   display: block;
   position: absolute;
   top: 265px;
   left: 150px;
+  z-index: 3;
 }
-
+.head {
+  width: 70px;
+  height: 70px;
+  border: 5px solid black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 220px;
+  left: 133px;
+  transform-origin: center bottom;
+  z-index: 0;
+}
 .torso {
   height: 90px;
   border: 7px solid black;
@@ -99,18 +104,35 @@
   border: 3px solid black;
   display: block;
   position: absolute;
-  top: 310px;
-  left: 205px;
+  top: 345px;
+  left: 235px;
   transform: rotate(-50deg);
-  transform-origin: top;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 .rightarm {
-  width: 50px;
+  width: 60px;
   border: 3px solid black;
   display: block;
   position: absolute;
-  top: 325px;
+  top: 330px;
   left: 175px;
   transform: rotate(30deg);
   transform-origin: top;
+}
+
+@keyframes wave {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-60deg);
+  }
+  50% {
+    transform-origin: bottom left;
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform-origin: bottom left;
+    transform: rotate(-60deg);
+  }
 }

@@ -17,7 +17,8 @@ function Form(props) {
     };
     await axios.post(baseURL, { fields }, config);
     props.setToggleFetch((curr) => !curr);
-    console.log(fields);
+
+    alert("Form Submitted!");
   };
 
   return (

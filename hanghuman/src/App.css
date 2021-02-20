@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: #fffcf7;
-  color: ;
+  background-color: #3d5a80d5;
+  background-size: cover;
+  font-family: "Truculenta", sans-serif;
 }
 .game-btn {
   color: white;
@@ -28,11 +29,33 @@ a:visited {
 }
 .header {
   background-color: #a1b5d8;
+  font-family: "ropest";
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0;
+}
+.header h2 {
+  font-family: "rodeo";
+  font-size: 100px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+.header a {
+  font-family: "Courier New", Courier, monospace;
+}
+h3 {
+  font-size: 30px;
 }
 button {
+  font-family: "Truculenta", sans-serif;
+  font-size: 25px;
   color: black;
   background-color: #a1b5d8;
   padding: 10px;
   border-radius: 10%;
   margin: 2px;
+}
+span {
+  font-family: "ropest";
+  font-size: 70px;
 }

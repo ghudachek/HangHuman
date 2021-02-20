@@ -1,5 +1,5 @@
 import Button from "./button";
-import StickFigure2 from "./stickFigure2";
+import HangHuman from "./hanghuman.jsx";
 import WinLose from "./winlose";
 import { useState, useEffect } from "react";
 
@@ -60,12 +60,11 @@ function Alphabet(props) {
             decrement={decrement}
             answers={answers}
             correctAnswers={props.correctAnswers}
-            lost={props.lost}
           />
         ))}
       </div>
       <WinLose incorrect={incorrect} />
-      <StickFigure2 incorrect={incorrect} />
+      <HangHuman incorrect={incorrect} />
     </div>
   );
 }

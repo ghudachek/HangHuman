@@ -17,16 +17,20 @@ function Levels(props) {
   const [restart, setRestart] = useState(false);
   //takes API and returns three categories of levels..
   useEffect(() => {
-    newGames.map((ele) => {
-      if (ele.level.toString("") === "easy") {
-        easy.push(ele);
-      } else if (ele.level.toString("") === "medium") {
-        med.push(ele);
-      } else if (ele.level.toString("") === "hard") {
-        hard.push(ele);
-      }
+    console.log(newGames);
+    console.log(newGames[0].level);
+    if (newGames !== 0) {
+      newGames.map((ele) => {
+        if (ele.level === "easy") {
+          easy.push(ele);
+        } else if (ele.level === "medium") {
+          med.push(ele);
+        } else if (ele.level === "hard") {
+          hard.push(ele);
+        }
+      });
       set();
-    });
+    }
   }, [restart]);
 
   function set() {
@@ -37,14 +41,6 @@ function Levels(props) {
 
   return (
     <div>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          setRestart((curr) => !curr);
-        }}
-      >
-        Restart
-      </button>
       {key.toString("") === "easy" ? (
         <CreateGame
           level={easyLvl}
