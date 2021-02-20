@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CreateGame from "./createGame";
+import "./css/game.css";
 
 function Levels(props) {
   let hard = [];
@@ -40,7 +41,7 @@ function Levels(props) {
   }
 
   return (
-    <div>
+    <div className="levels">
       {key.toString("") === "easy" ? (
         <CreateGame
           level={easyLvl}

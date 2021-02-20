@@ -1,0 +1,17 @@
+.all {
+  display: grid;
+  grid-template-areas:
+    "gs gs gs gs"
+    "bt bt bt bt"
+    "hm hm hm hm";
+}
+.game-start {
+  grid-area: gs;
+}
+.alphabet {
+  grid-area: bt;
+  justify-content: center;
+}
+.hangman {
+  grid-area: hm;
+}

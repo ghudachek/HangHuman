@@ -1,5 +1,5 @@
 import React from "react";
-import "./hang-human.css";
+import "./css/hang-human.css";
 
 const HangHuman = (props) => {
   return (
@@ -13,13 +13,13 @@ const HangHuman = (props) => {
         <div className="H-head" style={{ visibility: "hidden" }}></div>
       )}
 
-      {props.incorrect >= 9 ? (
+      {props.incorrect >= 1 ? (
         <div className="H-eye" style={{ visibility: "visible" }}></div>
       ) : (
         <div className="H-eye" style={{ visibility: "hidden" }}></div>
       )}
 
-      {props.incorrect >= 8 ? (
+      {props.incorrect >= 1 ? (
         <div className="H-eyeRight" style={{ visibility: "visible" }}></div>
       ) : (
         <div className="H-eyeRight" style={{ visibility: "hidden" }}></div>

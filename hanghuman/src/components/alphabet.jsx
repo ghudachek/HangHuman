@@ -2,6 +2,7 @@ import Button from "./button";
 import HangHuman from "./hanghuman.jsx";
 import WinLose from "./winlose";
 import { useState, useEffect } from "react";
+import "./css/hang-human.css";
 
 function Alphabet(props) {
   let incorrectLet = [];
@@ -49,7 +50,7 @@ function Alphabet(props) {
   }
 
   return (
-    <div>
+    <div className="alphabet">
       <WinLose incorrect={incorrect} />
       <div className="buttons">
         {alphabet.map((letter) => (

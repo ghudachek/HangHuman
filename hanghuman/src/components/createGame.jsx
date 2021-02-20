@@ -1,7 +1,7 @@
 import React from "react";
 import Alphabet from "./alphabet";
 import { useState, useEffect } from "react";
-import "./game.css";
+import "./css/game.css";
 
 const CreateGame = (props) => {
   const [guess, setGuess] = useState([]);
@@ -63,7 +63,6 @@ const CreateGame = (props) => {
           <span>{line}</span>
         ))}
       </div>
-
       <Alphabet selectedWord={selectedWord} correctAnswers={correctAnswers} />
     </div>
   );
