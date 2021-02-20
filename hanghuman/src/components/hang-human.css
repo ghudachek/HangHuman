@@ -1,62 +1,41 @@
 .bottom {
   width: 150px;
+  height: 0px;
   border: 5px solid black;
   background-color: black;
-  display: block;
-  position: absolute;
-  left: 200px;
-  top: 680px;
+  grid-area: bt;
 }
 .pole {
   height: 350px;
+  width: 0px;
   border: 5px solid black;
   background-color: black;
-  display: block;
-  position: absolute;
-  left: 265px;
-  top: 320px;
+  grid-area: pl;
 }
 .noose {
-  width: 90px;
+  height: 0px;
+  width: 100px;
   border: 5px solid black;
   background-color: black;
-  display: block;
-  position: absolute;
-  left: 265px;
-  top: 320px;
+  grid-area: no;
 }
 .H-head {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 5px solid black;
   border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 320px;
-  left: 333px;
   z-index: 1;
-  transform-origin: center bottom;
+  grid-area: hd;
 }
 .H-eye {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  display: block;
-  position: absolute;
-  border: 2px solid black;
-  top: 20px;
-  top: 345px;
-  left: 350px;
 }
 .H-eyeRight {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  display: block;
-  position: absolute;
-  border: 2px solid black;
-  top: 345px;
-  left: 380px;
 }
 .H-arc {
   width: 35px;
@@ -66,76 +45,56 @@
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  display: block;
-  position: absolute;
-  top: 370px;
-  left: 350px;
 }
 
 .H-torso {
-  height: 90px;
-  border: 7px solid black;
-  display: block;
-  position: absolute;
-  top: 400px;
-  left: 365px;
+  width: 0px;
+  background-color: black;
+  border-right: 7px solid black;
+  grid-area: ts;
 }
 
 .H-leftleg {
-  height: 150px;
+  width: 0px;
   border: 3px solid black;
-  fill: black;
-  display: block;
-  position: absolute;
-  top: 480px;
-  left: 370px;
   transform: rotate(12deg);
   transform-origin: top;
+  grid-area: ll;
 }
 .H-rightleg {
-  height: 150px;
+  width: 0px;
+  margin: 0;
   border: 3px solid black;
-  fill: black;
-  display: block;
-  position: absolute;
-  top: 480px;
-  left: 370px;
   transform: rotate(-12deg);
   transform-origin: top;
+  grid-area: rl;
 }
 
 .H-leftarm {
-  width: 100px;
+  width: 0px;
+  height: 30px;
   border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 450px;
-  left: 280px;
-  transform: rotate(-50deg);
-  transform-origin: top;
-}
-.H-rightarmupper {
-  width: 70px;
-  border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 410px;
-  left: 405px;
-  transform: rotate(-50deg);
-  transform-origin: top;
+  transform: rotate(40deg);
+  transform-origin: bottom-left;
+  grid-area: la;
 }
 .H-rightarm {
-  width: 50px;
+  width: 0px;
   border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 425px;
-  left: 375px;
-  transform: rotate(30deg);
+  transform: rotate(-50deg);
   transform-origin: top;
+  grid-area: ar;
 }
 .game-human {
-  display: block;
-  width: 500px;
-  height: 500px;
+  display: grid;
+  grid-template-areas:
+    "| . | . | . | . | . | . |"
+    "| . | no | no | no | . | . |"
+    "| . | pl | . | hd | . | . |"
+    "| . | pl | . | ts | . | . |"
+    "| . | pl | la | ts | ar | . |"
+    "| . | pl | . | ts | . | . |"
+    "| . | pl | ll | . | rl | . |"
+    "| . | pl | ll | . | rl | . |"
+    "| bt | bt | bt | . | . | . |";
 }

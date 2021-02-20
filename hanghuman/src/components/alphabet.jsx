@@ -50,6 +50,7 @@ function Alphabet(props) {
 
   return (
     <div>
+      <WinLose incorrect={incorrect} />
       <div className="buttons">
         {alphabet.map((letter) => (
           <Button
@@ -63,8 +64,9 @@ function Alphabet(props) {
           />
         ))}
       </div>
-      <WinLose incorrect={incorrect} />
-      <HangHuman incorrect={incorrect} />
+      <div className="hangman">
+        <HangHuman incorrect={incorrect} />
+      </div>
     </div>
   );
 }

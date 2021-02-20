@@ -1,6 +1,7 @@
 import React from "react";
 import Alphabet from "./alphabet";
 import { useState, useEffect } from "react";
+import "./game.css";
 
 const CreateGame = (props) => {
   const [guess, setGuess] = useState([]);
@@ -54,8 +55,8 @@ const CreateGame = (props) => {
   //console.log(guess); updates
 
   return (
-    <div>
-      <div>
+    <div className="all">
+      <div className="game-start">
         <h3>Category:{category}</h3>
         <p>Answer:</p>
         {guess.map((line) => (
