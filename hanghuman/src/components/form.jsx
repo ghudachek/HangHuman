@@ -39,9 +39,10 @@ function Form(props) {
         <label> Choose a Level:</label>
         <br />
         <select value={level} onChange={(e) => setLevel(e.target.value)}>
-          <option value={"easy"}>Easy</option>
-          <option value={"medium"}>Medium</option>
-          <option value={"hard"}>Hard</option>
+          <option>Choose one below</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
         </select>
         <button>Submit</button>
       </form>

@@ -7,12 +7,12 @@ const CreateGame = (props) => {
   const [guess, setGuess] = useState([]);
   const [selectedWord, setSelectedWord] = useState("");
   const [category, setCategory] = useState("");
-  const [] = useState();
+  const [score, setScore] = useState(0);
   let newGuess = [];
 
   useEffect(() => {
     if (props.level.word) {
-      setSelectedWord(props.level.word);
+      setSelectedWord(props.level.word.toLowerCase(""));
       setCategory(props.level.category);
       let splitWord = props.level.word.split("");
       if (guess.length === 0) {
@@ -49,6 +49,7 @@ const CreateGame = (props) => {
 
   function won() {
     if (guess.join("") === selectedWord) {
+      setScore(score + 1);
       alert("You Won!!");
     }
   }
@@ -56,6 +57,7 @@ const CreateGame = (props) => {
   return (
     <div className="all">
       <div className="game-start">
+        <p>Score:{score}</p>
         <h3>Category:{category}</h3>
         {guess.map((line, index) => (
           <span key={index}>{line}</span>

@@ -1,20 +1,22 @@
 .all {
   display: grid;
-  grid-template-areas:
-    "gs"
-    "bt"
-    "hm";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 2fr, 1fr;
 }
 .game-start {
-  grid-area: gs;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
 }
 .alphabet {
-  grid-area: bt;
-  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 .hangman {
-  grid-area: hm;
-  padding: 0px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
 }
 .game-start p {
   font-size: 30px;
@@ -22,7 +24,9 @@
 .game-start span {
   font-size: 90px;
 }
-
+.buttons {
+  margin-bottom: 300px;
+}
 @media only screen and (max-width: 750px) {
   .levels-link {
     font-size: 20px;

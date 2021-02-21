@@ -5,7 +5,7 @@ function Header() {
     <div className="header-all">
       <div className="header">
         <h2>HANG-HUMAN</h2>
-        <h4>~The Gender-Inclusive Hangman~</h4>
+        <h4>~The Gender-Nuetral Hangman~</h4>
         <Link to="/form">Create Your Own Level</Link>
       </div>
       <div className="level-btns">
@@ -16,7 +16,6 @@ function Header() {
         <button>
           <Link to="/medium/:medium">Medium</Link>
         </button>
-
         <button>
           <Link to="/hard/:hard">Hard</Link>
         </button>

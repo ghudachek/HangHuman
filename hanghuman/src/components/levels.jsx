@@ -12,9 +12,7 @@ function Levels(props) {
   const [easyLvl, setEasyLvl] = useState([]);
   const params = useParams();
   let key = Object.keys(params);
-  const [toggleFetch, setToggleFetch] = useState(false);
   let newGames = props.games.records.map((element) => element.fields);
-  const [restart, setRestart] = useState(false);
   //takes API and returns three categories of levels..
   useEffect(() => {
     if (newGames !== 0) {
@@ -29,7 +27,7 @@ function Levels(props) {
       });
       set();
     }
-  }, [toggleFetch]);
+  }, [props.toggleFetch]);
 
   function set() {
     setEasyLvl(easy[Math.floor(Math.random() * easy.length)]);
@@ -42,29 +40,15 @@ function Levels(props) {
       <div className="levels-link">
         <Link to="/">Home</Link>
       </div>
+      {/* <Score /> */}
       {key.toString("") === "easy" ? (
-        <CreateGame
-          level={easyLvl}
-          toggleFetch={toggleFetch}
-          restart={restart}
-          key={easyLvl}
-        />
+        <CreateGame level={easyLvl} toggleFetch={props.toggleFetch} />
       ) : null}
       {key.toString("") === "medium" ? (
-        <CreateGame
-          level={medLvl}
-          toggleFetch={toggleFetch}
-          restart={restart}
-          key={medLvl}
-        />
+        <CreateGame level={medLvl} toggleFetch={props.toggleFetch} />
       ) : null}
       {key.toString("") === "hard" ? (
-        <CreateGame
-          level={hardLvl}
-          toggleFetch={toggleFetch}
-          restart={restart}
-          key={hardLvl}
-        />
+        <CreateGame level={hardLvl} toggleFetch={props.toggleFetch} />
       ) : null}
     </div>
   );

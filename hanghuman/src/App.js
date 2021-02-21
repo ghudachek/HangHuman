@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { baseURL, config } from "./services";
 import axios from "axios";
 import Levels from "./components/levels";
@@ -15,6 +15,7 @@ function App() {
       const resp = await axios.get(baseURL, config);
 
       setGames(resp.data);
+      console.log(resp.data);
     };
     getData();
   }, [toggleFetch]);
@@ -33,13 +34,13 @@ function App() {
         <Form setToggleFetch={setToggleFetch} />
       </Route>
       <Route exact path="/easy/:easy">
-        {games ? <Levels games={games} /> : null}
+        {games ? <Levels games={games} toggleFetch={toggleFetch} /> : null}
       </Route>
       <Route exact path="/medium/:medium">
-        {games ? <Levels games={games} /> : null}
+        {games ? <Levels games={games} toggleFetch={toggleFetch} /> : null}
       </Route>
       <Route exact path="/hard/:hard">
-        {games ? <Levels games={games} /> : null}
+        {games ? <Levels games={games} toggleFetch={toggleFetch} /> : null}
       </Route>
     </div>
   );
