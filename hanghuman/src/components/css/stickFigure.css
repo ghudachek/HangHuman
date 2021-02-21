@@ -1,23 +1,30 @@
 .front-page-human {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repear(10, 1fr);
+  grid-template-rows: 10% repeat(30, 20px) 10%;
 }
 .eye {
   width: 10px;
-  background-color: white;
   height: 10px;
+  background-color: black;
   border-radius: 50%;
   border: 2px solid black;
   z-index: 3;
+  grid-column-start: 9;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  justify-self: center;
 }
 .eyeRight {
-  background-color: white;
+  background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 2px solid black;
   z-index: 3;
+  grid-column-start: 11;
+  grid-row-start: 3;
+  justify-self: center;
 }
 .arc {
   width: 35px;
@@ -28,6 +35,10 @@
   border-bottom: 1px solid black;
   border-top: 1px solid transparent;
   z-index: 3;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 4;
+  justify-self: center;
 }
 .head {
   width: 70px;
@@ -37,70 +48,91 @@
   border-radius: 50%;
   transform-origin: center bottom;
   z-index: 0;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  justify-self: center;
 }
 .torso {
   height: 90px;
+  width: 0px;
   border: 7px solid black;
+  background-color: black;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 6;
+  grid-row-end: 15;
+  justify-self: center;
 }
 
 .leftleg {
-  height: 150px;
   border: 3px solid black;
   transform: rotate(12deg);
   transform-origin: top;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 10;
+  grid-row-end: 16;
+  justify-self: center;
 }
 
 .rightleg {
-  height: 150px;
   border: 3px solid black;
   transform: rotate(-12deg);
   transform-origin: top;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 10;
+  grid-row-end: 16;
+  justify-self: center;
 }
 
 .leftarm {
-  width: 100px;
+  width: 0px;
   border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 350px;
-  left: 80px;
-  transform: rotate(-50deg);
+  transform: rotate(30deg);
   transform-origin: top;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 6;
+  grid-row-end: 11;
+  justify-self: center;
 }
 .rightarmupper {
-  width: 70px;
+  width: 0px;
   border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 345px;
-  left: 235px;
-  transform: rotate(-50deg);
+  grid-column-start: 12;
+  grid-row-start: 4;
+  grid-row-end: 8;
+  justify-self: start;
+  transform: rotate(60deg);
   animation-name: wave;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 .rightarm {
-  width: 60px;
+  width: 0px;
   border: 3px solid black;
-  display: block;
-  position: absolute;
-  top: 330px;
-  left: 175px;
-  transform: rotate(30deg);
+  transform: rotate(-55deg);
   transform-origin: top;
+  grid-column-start: 10;
+  grid-row-start: 6;
+  grid-row-end: 10;
+  justify-self: end;
 }
 
 @keyframes wave {
   0% {
     transform-origin: bottom left;
-    transform: rotate(-60deg);
+    transform: rotate(50deg);
   }
   50% {
     transform-origin: bottom left;
-    transform: rotate(-100deg);
+    transform: rotate(0deg);
   }
   100% {
     transform-origin: bottom left;
-    transform: rotate(-60deg);
+    transform: rotate(50deg);
   }
 }

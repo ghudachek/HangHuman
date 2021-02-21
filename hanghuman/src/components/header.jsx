@@ -8,19 +8,22 @@ function Header() {
         <h4>~The Gender-Inclusive Hangman~</h4>
         <Link to="/form">Create Your Own Level</Link>
       </div>
+      <div className="level-btns">
+        <h3>Choose a Level:</h3>
+        <button>
+          <Link to="/easy/:easy">Easy</Link>
+        </button>
+        <button>
+          <Link to="/medium/:medium">Medium</Link>
+        </button>
 
-      <h3>Choose a Level:</h3>
-      <button>
-        <Link to="/easy/:easy">Easy</Link>
-      </button>
-      <button>
-        <Link to="/medium/:medium">Medium</Link>
-      </button>
-
-      <button>
-        <Link to="/hard/:hard">Hard</Link>
-      </button>
-      <StickFigure />
+        <button>
+          <Link to="/hard/:hard">Hard</Link>
+        </button>
+      </div>
+      <div className="figure">
+        <StickFigure />
+      </div>
     </div>
   );
 }

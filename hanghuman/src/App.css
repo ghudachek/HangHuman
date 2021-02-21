@@ -100,3 +100,18 @@ span {
   z-index: 5;
   color: red;
 }
+.header-all {
+  grid-template-areas:
+    "hd"
+    "lb"
+    "fg";
+}
+.header {
+  grid-area: hd;
+}
+.level-btns {
+  grid-area: lb;
+}
+.figure {
+  grid-area: fg;
+}
