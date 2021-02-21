@@ -3,6 +3,9 @@
   grid-template-columns: 2fr repeat(15, 25px) 2fr;
   grid-template-rows: repeat(14, 25px);
   border: 2px solid black;
+  background-image: url("./tornado.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .bottom {
   height: 0px;
