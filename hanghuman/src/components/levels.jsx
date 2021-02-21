@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import CreateGame from "./createGame";
 import "./css/game.css";
 
@@ -32,7 +31,7 @@ function Levels(props) {
       });
       set();
     }
-  }, [restart]);
+  }, [toggleFetch]);
 
   function set() {
     setEasyLvl(easy[Math.floor(Math.random() * easy.length)]);
@@ -42,6 +41,9 @@ function Levels(props) {
 
   return (
     <div className="levels">
+      <div className="levels-link">
+        <Link to="/">Home</Link>
+      </div>
       {key.toString("") === "easy" ? (
         <CreateGame
           level={easyLvl}

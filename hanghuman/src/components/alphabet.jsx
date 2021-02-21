@@ -1,7 +1,8 @@
 import Button from "./button";
 import HangHuman from "./hanghuman.jsx";
+import { Route, Link } from "react-router-dom";
 import WinLose from "./winlose";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./css/hang-human.css";
 
 function Alphabet(props) {
@@ -51,7 +52,8 @@ function Alphabet(props) {
 
   return (
     <div className="alphabet">
-      <WinLose incorrect={incorrect} />
+      <WinLose incorrect={incorrect} selectedWord={props.selectedWord} />
+
       <div className="buttons">
         {alphabet.map((letter) => (
           <Button

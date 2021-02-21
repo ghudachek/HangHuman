@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import StickFigure from "./stickFigure";
 function Header() {
   return (
-    <div>
+    <div className="header-all">
       <div className="header">
         <h2>HANG-HUMAN</h2>
         <h4>~The Gender-Inclusive Hangman~</h4>

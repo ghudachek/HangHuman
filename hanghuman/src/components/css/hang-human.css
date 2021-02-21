@@ -1,7 +1,7 @@
 .game-human {
   display: grid;
   grid-template-columns: 4fr repeat(15, 1fr) 4fr;
-  grid-template-rows: 4fr repeat(20, 1fr) 2fr;
+  grid-template-rows: 2fr repeat(20, 1fr) 4fr;
 }
 .bottom {
   height: 0px;
@@ -9,7 +9,7 @@
   background-color: black;
   grid-column-start: 2;
   grid-column-end: 7;
-  grid-row-start: 18;
+  grid-row-start: 14;
 }
 .pole {
   width: 0px;
@@ -17,7 +17,7 @@
   background-color: black;
   grid-column-start: 4;
   grid-row-start: 2;
-  grid-row-end: 18;
+  grid-row-end: 14;
 }
 .noose {
   height: 0px;
@@ -82,7 +82,7 @@
   border: 10px solid black;
   grid-column-start: 7;
   grid-row-start: 4;
-  grid-row-end: 10;
+  grid-row-end: 9;
   justify-self: center;
 }
 
@@ -93,7 +93,7 @@
   transform-origin: top;
   grid-column-start: 7;
   grid-row-start: 9;
-  grid-row-end: 15;
+  grid-row-end: 13;
   justify-self: center;
 }
 .H-rightleg {
@@ -103,7 +103,7 @@
   transform-origin: top;
   grid-column-start: 7;
   grid-row-start: 9;
-  grid-row-end: 15;
+  grid-row-end: 13;
   justify-self: center;
 }
 

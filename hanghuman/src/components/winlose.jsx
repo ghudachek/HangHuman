@@ -1,22 +1,16 @@
 import Alert from "react-bootstrap/Alert";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 function WinLose(props) {
-  const [restart, setRestart] = useState(false);
-  if (props.incorrect === 9) {
+  if (props.incorrect === 8) {
     return (
       <div className="you-lose">
-        <Alert varient="danger">
+        <Alert variant="danger">
           <Alert.Heading>YOU LOSE</Alert.Heading>
+          <h2>The word was: {props.selectedWord}</h2>
           <p>so sorry try again..</p>
         </Alert>
-
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            setRestart((curr) => !curr);
-          }}
-        >
-          Restart
+        <button>
+          <Link to="/">Restart</Link>
         </button>
       </div>
     );

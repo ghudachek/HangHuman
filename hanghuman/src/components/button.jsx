@@ -17,6 +17,9 @@ const Button = (props) => {
           setDisabled(true);
           props.decrement();
         }
+        if (props.restart === true) {
+          setDisabled(false);
+        }
       }}
       key={props.letter}
     >

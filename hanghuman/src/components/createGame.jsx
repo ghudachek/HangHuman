@@ -16,7 +16,7 @@ const CreateGame = (props) => {
       setSelectedWord(props.level.word);
       setCategory(props.level.category);
 
-      if (guess.length === 0) {
+      if (guess.length === 0 || props.restart === true) {
         for (let i = 0; i < props.level.word.length; i++) {
           newGuess.push(" _ ");
         }
@@ -48,7 +48,6 @@ const CreateGame = (props) => {
   function won() {
     if (guess.join("") === selectedWord) {
       alert("You Won!!");
-      console.log("you won");
     }
   }
 
@@ -58,7 +57,6 @@ const CreateGame = (props) => {
     <div className="all">
       <div className="game-start">
         <h3>Category:{category}</h3>
-        <p>Answer:</p>
         {guess.map((line) => (
           <span>{line}</span>
         ))}

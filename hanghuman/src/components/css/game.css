@@ -14,4 +14,11 @@
 }
 .hangman {
   grid-area: hm;
+  padding: 0px;
+}
+.game-start p {
+  font-size: 30px;
+}
+.game-start span {
+  font-size: 90px;
 }
