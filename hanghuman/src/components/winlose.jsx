@@ -4,7 +4,7 @@ function WinLose(props) {
   if (props.incorrect === 8) {
     return (
       <div className="you-lose">
-        <Alert variant="danger">
+        <Alert>
           <Alert.Heading>YOU LOSE</Alert.Heading>
           <h2>The word was: {props.selectedWord}</h2>
           <p>so sorry try again..</p>
