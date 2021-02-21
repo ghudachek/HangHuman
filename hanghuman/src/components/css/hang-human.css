@@ -1,7 +1,7 @@
 .game-human {
   display: grid;
   grid-template-columns: 4fr repeat(15, 1fr) 4fr;
-  grid-template-rows: 4fr repeat(15, 1fr) 4fr;
+  grid-template-rows: 4fr repeat(20, 1fr) 2fr;
 }
 .bottom {
   height: 0px;
@@ -9,7 +9,7 @@
   background-color: black;
   grid-column-start: 2;
   grid-column-end: 7;
-  grid-row-start: 13;
+  grid-row-start: 18;
 }
 .pole {
   width: 0px;
@@ -17,20 +17,19 @@
   background-color: black;
   grid-column-start: 4;
   grid-row-start: 2;
-  grid-row-end: 13;
+  grid-row-end: 18;
 }
 .noose {
   height: 0px;
   border: 5px solid black;
   background-color: black;
-  grid-area: no;
   grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 2;
 }
 .H-head {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border: 5px solid black;
   background-color: white;
   border-radius: 50%;
@@ -42,20 +41,20 @@
   justify-self: center;
 }
 .H-eye {
-  width: 10px;
-  height: 20px;
+  width: 15px;
+  height: 25px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 5px solid white;
   background-color: black;
   z-index: 2;
   grid-column-start: 7;
   grid-row-start: 2;
-  justify-self: center;
+  justify-self: start;
 }
 .H-eyeRight {
-  width: 10px;
-  height: 20px;
-  border: 3px solid white;
+  width: 15px;
+  height: 25px;
+  border: 5px solid white;
   background-color: black;
   border-radius: 50%;
   z-index: 2;
@@ -65,25 +64,25 @@
 }
 .H-arc {
   width: 35px;
-  height: 10px;
-  border-radius: 50%;
+  height: 20px;
+  border-radius: 60%;
   border-right: 5px solid black;
-  border-left: 3px solid black;
-  border-bottom: 1px solid black;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid transparent;
   border-top: 1px solid black;
   z-index: 1;
   grid-column-start: 7;
-  grid-row-start: 3;
+  grid-row-start: 4;
   justify-self: center;
 }
 
 .H-torso {
   width: 0px;
   background-color: black;
-  border: 5px solid black;
+  border: 10px solid black;
   grid-column-start: 7;
   grid-row-start: 4;
-  grid-row-end: 8;
+  grid-row-end: 10;
   justify-self: center;
 }
 
@@ -93,8 +92,8 @@
   transform: rotate(20deg);
   transform-origin: top;
   grid-column-start: 7;
-  grid-row-start: 8;
-  grid-row-end: 11;
+  grid-row-start: 9;
+  grid-row-end: 15;
   justify-self: center;
 }
 .H-rightleg {
@@ -103,28 +102,206 @@
   transform: rotate(-12deg);
   transform-origin: top;
   grid-column-start: 7;
-  grid-row-start: 8;
-  grid-row-end: 11;
+  grid-row-start: 9;
+  grid-row-end: 15;
   justify-self: center;
 }
 
 .H-leftarm {
   width: 0px;
   border: 3px solid black;
-  transform: rotate(35deg);
+  background-color: black;
+  transform: rotate(25deg);
   transform-origin: bottom-left;
   grid-column-start: 7;
-  grid-row-start: 4;
-  grid-row-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 9;
   justify-self: start;
 }
 .H-rightarm {
   width: 0px;
   border: 3px solid black;
-  transform: rotate(-25deg);
-  transform-origin: top;
-  grid-column-start: 7;
+  background-color: black;
+  transform: rotate(-40deg);
+  transform-origin: bottom-left;
+  grid-column-start: 8;
   grid-row-start: 5;
   grid-row-end: 8;
-  justify-self: center;
+  justify-self: start;
+}
+@media only screen and (max-width: 1100px) {
+  .H-eye {
+    width: 15px;
+    height: 25px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: black;
+    z-index: 2;
+    grid-column-start: 7;
+    grid-row-start: 2;
+    justify-self: start;
+  }
+  .H-eyeRight {
+    width: 15px;
+    height: 25px;
+    border: 5px solid white;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2;
+    grid-column-start: 8;
+    grid-row-start: 2;
+    justify-self: start;
+  }
+  .H-leftarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(35deg);
+    transform-origin: bottom-left;
+    grid-column-start: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    justify-self: start;
+  }
+  .H-rightarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(-25deg);
+    transform-origin: top;
+    grid-column-start: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    justify-self: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .game-human {
+    display: grid;
+    grid-template-columns: 4fr repeat(15, 1fr) 4fr;
+    grid-template-rows: 4fr repeat(15, 1fr) 4fr;
+  }
+  .bottom {
+    height: 0px;
+    border: 5px solid black;
+    background-color: black;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 13;
+  }
+  .pole {
+    width: 0px;
+    border: 5px solid black;
+    background-color: black;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 13;
+  }
+  .noose {
+    height: 0px;
+    border: 5px solid black;
+    background-color: black;
+    grid-area: no;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+  }
+  .H-head {
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 0;
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    justify-self: center;
+  }
+  .H-eye {
+    width: 10px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: black;
+    z-index: 2;
+    grid-column-start: 7;
+    grid-row-start: 2;
+    justify-self: center;
+  }
+  .H-eyeRight {
+    width: 10px;
+    height: 20px;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 2;
+    grid-column-start: 7;
+    grid-row-start: 2;
+    justify-self: end;
+  }
+  .H-arc {
+    width: 35px;
+    height: 10px;
+    border-radius: 50%;
+    border-right: 5px solid black;
+    border-left: 3px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    z-index: 1;
+    grid-column-start: 7;
+    grid-row-start: 3;
+    justify-self: center;
+  }
+
+  .H-torso {
+    width: 0px;
+    background-color: black;
+    border: 5px solid black;
+    grid-column-start: 7;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    justify-self: center;
+  }
+
+  .H-leftleg {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(20deg);
+    transform-origin: top;
+    grid-column-start: 7;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    justify-self: center;
+  }
+  .H-rightleg {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(-12deg);
+    transform-origin: top;
+    grid-column-start: 7;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    justify-self: center;
+  }
+
+  .H-leftarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(35deg);
+    transform-origin: bottom-left;
+    grid-column-start: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    justify-self: start;
+  }
+  .H-rightarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(-25deg);
+    transform-origin: top;
+    grid-column-start: 7;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    justify-self: center;
+  }
 }
