@@ -1,7 +1,7 @@
 .game-human {
   display: grid;
   grid-template-columns: 4fr repeat(15, 1fr) 4fr;
-  grid-template-rows: 2fr repeat(20, 1fr) 4fr;
+  grid-template-rows: 2fr repeat(14, 1fr);
 }
 .bottom {
   height: 0px;

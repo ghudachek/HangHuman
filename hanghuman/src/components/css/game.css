@@ -1,9 +1,9 @@
 .all {
   display: grid;
   grid-template-areas:
-    "gs gs gs gs"
-    "bt bt bt bt"
-    "hm hm hm hm";
+    "gs"
+    "bt"
+    "hm";
 }
 .game-start {
   grid-area: gs;
@@ -21,4 +21,23 @@
 }
 .game-start span {
   font-size: 90px;
+}
+
+@media only screen and (max-width: 750px) {
+  .levels-link {
+    font-size: 20px;
+  }
+  .game-start {
+    font-size: 20px;
+  }
+  .game-start p {
+    font-size: 15px;
+  }
+  .game-start span {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+  .game-btn {
+    font: 5px;
+  }
 }

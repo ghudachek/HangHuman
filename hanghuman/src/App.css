@@ -15,21 +15,7 @@
   text-align: right;
   padding-right: 20px;
 }
-.game-btn {
-  color: white;
-  background-color: #a1b5d8;
-  background-image: linear-gradient(#a1b5d8, #8998b4);
-  font-size: 20px;
-  padding: 10px;
-  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2),
-    0 6px 5px 0 rgba(159, 151, 151, 0.19);
-  border-radius: 20%;
-  margin: 5px;
-}
-.game-btn:hover {
-  background-color: #818fa7;
-  background-image: linear-gradient(#818fa7, #818fa7);
-}
+
 button:disabled {
   background-color: grey;
   background-image: linear-gradient(#1b1c1f, #8998b4);
@@ -100,18 +86,44 @@ span {
   z-index: 5;
   color: red;
 }
-.header-all {
-  grid-template-areas:
-    "hd"
-    "lb"
-    "fg";
+.game-btn {
+  color: white;
+  background-color: #a1b5d8;
+  background-image: linear-gradient(#a1b5d8, #8998b4);
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2),
+    0 6px 5px 0 rgba(159, 151, 151, 0.19);
+  border-radius: 20%;
+  margin: 5px;
 }
-.header {
-  grid-area: hd;
+.game-btn:hover {
+  background-color: #818fa7;
+  background-image: linear-gradient(#818fa7, #818fa7);
 }
-.level-btns {
-  grid-area: lb;
-}
-.figure {
-  grid-area: fg;
+@media only screen and (max-width: 750px) {
+  .header {
+    background-color: #a1b5d8;
+    font-family: "ropest";
+    font-size: 18px;
+  }
+  .header h2 {
+    font-family: "rodeo";
+    font-size: 70px;
+    margin: 0 auto;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  button {
+    font-family: "Truculenta", sans-serif;
+    font-size: 18px;
+  }
+  .game-btn {
+    font-size: 12px;
+  }
+  .buttons {
+    font-size: 12px;
+  }
 }

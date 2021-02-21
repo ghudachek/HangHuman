@@ -10,21 +10,23 @@ const CreateGame = (props) => {
   const [] = useState();
   let newGuess = [];
 
-  console.log(props.level.word);
   useEffect(() => {
     if (props.level.word) {
       setSelectedWord(props.level.word);
       setCategory(props.level.category);
-
-      if (guess.length === 0 || props.restart === true) {
+      let splitWord = props.level.word.split("");
+      if (guess.length === 0) {
         for (let i = 0; i < props.level.word.length; i++) {
-          newGuess.push(" _ ");
+          if (splitWord[i] !== " ") {
+            newGuess.push(" _ ");
+          } else {
+            newGuess.push(" ");
+          }
         }
       }
       setGuess(newGuess);
     }
   }, [props.level]);
-  console.log(guess);
 
   //checks for correct letters and updates lines when correct letter hits
   function correctAnswers(letter) {
@@ -44,21 +46,19 @@ const CreateGame = (props) => {
     }
     won();
   }
-  console.log(guess);
+
   function won() {
     if (guess.join("") === selectedWord) {
       alert("You Won!!");
     }
   }
 
-  //console.log(guess); updates
-
   return (
     <div className="all">
       <div className="game-start">
         <h3>Category:{category}</h3>
-        {guess.map((line) => (
-          <span>{line}</span>
+        {guess.map((line, index) => (
+          <span key={index}>{line}</span>
         ))}
       </div>
       <Alphabet selectedWord={selectedWord} correctAnswers={correctAnswers} />

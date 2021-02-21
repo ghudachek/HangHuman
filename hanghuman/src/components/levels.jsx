@@ -17,8 +17,6 @@ function Levels(props) {
   const [restart, setRestart] = useState(false);
   //takes API and returns three categories of levels..
   useEffect(() => {
-    console.log(newGames);
-    console.log(newGames[0].level);
     if (newGames !== 0) {
       newGames.map((ele) => {
         if (ele.level === "easy") {
@@ -49,6 +47,7 @@ function Levels(props) {
           level={easyLvl}
           toggleFetch={toggleFetch}
           restart={restart}
+          key={easyLvl}
         />
       ) : null}
       {key.toString("") === "medium" ? (
@@ -56,6 +55,7 @@ function Levels(props) {
           level={medLvl}
           toggleFetch={toggleFetch}
           restart={restart}
+          key={medLvl}
         />
       ) : null}
       {key.toString("") === "hard" ? (
@@ -63,6 +63,7 @@ function Levels(props) {
           level={hardLvl}
           toggleFetch={toggleFetch}
           restart={restart}
+          key={hardLvl}
         />
       ) : null}
     </div>

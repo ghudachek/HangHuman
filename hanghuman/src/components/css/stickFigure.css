@@ -4,27 +4,26 @@
   grid-template-rows: 10% repeat(30, 20px) 10%;
 }
 .eye {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: black;
   border-radius: 50%;
   border: 2px solid black;
   z-index: 3;
-  grid-column-start: 9;
-  grid-column-end: 12;
+  grid-column-start: 10;
   grid-row-start: 3;
-  justify-self: center;
+  justify-self: end;
 }
 .eyeRight {
   background-color: black;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 2px solid black;
   z-index: 3;
   grid-column-start: 11;
   grid-row-start: 3;
-  justify-self: center;
+  justify-self: start;
 }
 .arc {
   width: 35px;
@@ -102,10 +101,10 @@
 .rightarmupper {
   width: 0px;
   border: 3px solid black;
-  grid-column-start: 12;
+  grid-column-start: 11;
   grid-row-start: 4;
   grid-row-end: 8;
-  justify-self: start;
+  justify-self: end;
   transform: rotate(60deg);
   animation-name: wave;
   animation-duration: 2s;
@@ -134,5 +133,91 @@
   100% {
     transform-origin: bottom left;
     transform: rotate(50deg);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .eye {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 3;
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    justify-self: center;
+  }
+  .eyeRight {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 3;
+    grid-column-start: 11;
+    grid-row-start: 3;
+    justify-self: center;
+  }
+  .arc {
+    width: 35px;
+    height: 10px;
+    border-radius: 50%;
+    border-right: 1px solid transparent;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid transparent;
+    z-index: 3;
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    justify-self: center;
+  }
+  .rightarmupper {
+    width: 0px;
+    border: 3px solid black;
+    grid-column-start: 12;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    justify-self: start;
+    transform: rotate(60deg);
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .rightarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(-55deg);
+    transform-origin: top;
+    grid-column-start: 10;
+    grid-row-start: 6;
+    grid-row-end: 10;
+    justify-self: end;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .rightarmupper {
+    width: 0px;
+    border: 3px solid black;
+    grid-column-start: 13;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    justify-self: start;
+    transform: rotate(60deg);
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .rightarm {
+    width: 0px;
+    border: 3px solid black;
+    transform: rotate(-50deg);
+    transform-origin: top;
+    grid-column-start: 11;
+    grid-row-start: 6;
+    grid-row-end: 10;
+    justify-self: start;
   }
 }

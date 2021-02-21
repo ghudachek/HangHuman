@@ -54,6 +54,9 @@ function Alphabet(props) {
     <div className="alphabet">
       <WinLose incorrect={incorrect} selectedWord={props.selectedWord} />
 
+      <div className="hangman">
+        <HangHuman incorrect={incorrect} />
+      </div>
       <div className="buttons">
         {alphabet.map((letter) => (
           <Button
@@ -66,9 +69,6 @@ function Alphabet(props) {
             correctAnswers={props.correctAnswers}
           />
         ))}
-      </div>
-      <div className="hangman">
-        <HangHuman incorrect={incorrect} />
       </div>
     </div>
   );
