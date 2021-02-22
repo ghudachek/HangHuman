@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 2fr repeat(15, 25px) 2fr;
   grid-template-rows: repeat(14, 25px);
-  margin: 50px;
+  margin: 40px;
 }
 .bottom {
   height: 0px;
@@ -135,7 +135,7 @@
     display: grid;
     grid-template-columns: 2fr repeat(15, 25px) 2fr;
     grid-template-rows: repeat(14, 25px);
-    margin: 30px;
+    margin: 20px;
   }
   .H-eye {
     width: 15px;
@@ -185,7 +185,7 @@
     display: grid;
     grid-template-columns: 3fr repeat(15, 25px) 2fr;
     grid-template-rows: repeat(14, 25px);
-    margin: 20px;
+    margin: 0px;
   }
   .bottom {
     height: 0px;

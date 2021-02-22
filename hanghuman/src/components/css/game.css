@@ -30,43 +30,47 @@
   grid-row-start: 2;
 }
 .game-start p {
-  font-size: 30px;
+  font-size: 20px;
 }
 .game-start span {
-  font-size: 90px;
+  font-size: 70px;
+  margin: 0px;
 }
 .game-btn {
-  font-size: 50px;
+  font-size: 20px;
   margin-bottom: 40px;
+}
+.game-start h3 {
+  font-size: 25px;
 }
 @media only screen and (max-width: 1100px) {
   .game-btn {
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: 15px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (max-width: 750px) {
   .levels-link {
-    font-size: 20px;
+    font-size: 15px;
   }
   .game-start {
     font-size: 20px;
   }
   .game-start p {
-    font-size: 20px;
+    font-size: 15px;
   }
   .game-start span {
-    font-size: 40px;
+    font-size: 30px;
     padding-bottom: 10px;
   }
   .game-start h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .buttons {
-    margin-bottom: 200px;
+    margin-bottom: 20px;
   }
   .game-btn {
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 }

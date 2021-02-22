@@ -1,7 +1,7 @@
 .front-page-human {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: 10% repeat(30, 20px) 10%;
+  grid-template-rows: 10% repeat(15, 20px) 10%;
 }
 .eye {
   width: 15px;
