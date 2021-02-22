@@ -1,7 +1,6 @@
 import Button from "./button";
 import HangHuman from "./hanghuman.jsx";
-import { Route, Link } from "react-router-dom";
-import WinLose from "./winlose";
+import Lose from "./lose";
 import { useState } from "react";
 import "./css/hang-human.css";
 
@@ -52,7 +51,7 @@ function Alphabet(props) {
 
   return (
     <div className="alphabet">
-      <WinLose incorrect={incorrect} selectedWord={props.selectedWord} />
+      <Lose incorrect={incorrect} selectedWord={props.selectedWord} />
 
       <div className="hangman">
         <HangHuman incorrect={incorrect} />

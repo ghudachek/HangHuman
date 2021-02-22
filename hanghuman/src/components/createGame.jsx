@@ -13,31 +13,20 @@ const CreateGame = (props) => {
   let gameSet = {};
   let newGuess = [];
 
-  //console.log(props.level[0]);
-
   useEffect(() => {
     if (props.level[0]) {
-      console.log(props.level);
-      console.log(props.level.length);
       if (score === props.level.length) {
         alert("CONGRATS...You beat all of these Levels! ");
         setScore(0);
       }
       if (score < props.level.length) {
-        //  setCurrentGame(props.level[score]);
         gameSet = props.level[score];
       } else {
         gameSet = props.level[0];
       }
-
-      // setCurrentGame(props.level[0]);
-
-      console.log(gameSet);
       setSelectedWord(gameSet.word.toLowerCase(""));
       setCategory(gameSet.category);
-      console.log(category);
       let splitWord = gameSet.word.split("");
-      //if (guess.length === 0) {
       for (let i = 0; i < gameSet.word.length; i++) {
         if (splitWord[i] !== " ") {
           newGuess.push(" _ ");
@@ -47,7 +36,6 @@ const CreateGame = (props) => {
       }
 
       setGuess(newGuess);
-      //}
     }
   }, [props.level, next]);
 
@@ -79,6 +67,8 @@ const CreateGame = (props) => {
       }, 500);
     }
   }
+
+  //Play next level button
   function playNext() {
     setDisplay("none");
     setNext((curr) => !curr);
@@ -98,7 +88,11 @@ const CreateGame = (props) => {
         correctAnswers={correctAnswers}
         next={next}
       />
-      <button onClick={() => playNext()} style={{ display: display }}>
+      <button
+        className="next-btn"
+        onClick={() => playNext()}
+        style={{ display: display }}
+      >
         Play Next
       </button>
     </div>

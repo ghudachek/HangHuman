@@ -1,6 +1,6 @@
 import Alert from "react-bootstrap/Alert";
 import { Link } from "react-router-dom";
-function WinLose(props) {
+function Lose(props) {
   if (props.incorrect === 8) {
     return (
       <div className="you-lose">
@@ -18,4 +18,4 @@ function WinLose(props) {
     return null;
   }
 }
-export default WinLose;
+export default Lose;
