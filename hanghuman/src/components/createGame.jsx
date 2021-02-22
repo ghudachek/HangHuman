@@ -81,10 +81,7 @@ const CreateGame = (props) => {
   }
   function playNext() {
     setDisplay("none");
-    setNext(true);
-    setTimeout(() => {
-      setNext(false);
-    }, 1000);
+    setNext((curr) => !curr);
   }
 
   return (

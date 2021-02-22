@@ -1,7 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Button = (props) => {
   const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    setDisabled(false);
+  }, [props.next]);
 
   return (
     <button
@@ -15,9 +19,6 @@ const Button = (props) => {
         } else {
           setDisabled(true);
           props.decrement();
-        }
-        if (props.next === false) {
-          setDisabled(false);
         }
       }}
       key={props.letter}
