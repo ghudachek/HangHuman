@@ -11,7 +11,6 @@ const stickFigure = () => {
       <div className="torso"></div>
       <div className="leftarm"></div>
       <div className="rightarmupper"></div>
-      <div className="rightarm"></div>
       <div className="leftleg"></div>
       <div className="rightleg"></div>
     </div>

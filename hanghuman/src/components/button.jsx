@@ -16,7 +16,7 @@ const Button = (props) => {
           setDisabled(true);
           props.decrement();
         }
-        if (props.restart === true) {
+        if (props.next === false) {
           setDisabled(false);
         }
       }}

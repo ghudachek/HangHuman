@@ -8,25 +8,48 @@ const CreateGame = (props) => {
   const [selectedWord, setSelectedWord] = useState("");
   const [category, setCategory] = useState("");
   const [score, setScore] = useState(0);
+  const [next, setNext] = useState(false);
+  const [display, setDisplay] = useState("none");
+  let gameSet = {};
   let newGuess = [];
 
+  //console.log(props.level[0]);
+
   useEffect(() => {
-    if (props.level.word) {
-      setSelectedWord(props.level.word.toLowerCase(""));
-      setCategory(props.level.category);
-      let splitWord = props.level.word.split("");
-      if (guess.length === 0) {
-        for (let i = 0; i < props.level.word.length; i++) {
-          if (splitWord[i] !== " ") {
-            newGuess.push(" _ ");
-          } else {
-            newGuess.push(" ");
-          }
+    if (props.level[0]) {
+      console.log(props.level);
+      console.log(props.level.length);
+      if (score === props.level.length) {
+        alert("CONGRATS...You beat all of these Levels! ");
+        setScore(0);
+      }
+      if (score < props.level.length) {
+        //  setCurrentGame(props.level[score]);
+        gameSet = props.level[score];
+      } else {
+        gameSet = props.level[0];
+      }
+
+      // setCurrentGame(props.level[0]);
+
+      console.log(gameSet);
+      setSelectedWord(gameSet.word.toLowerCase(""));
+      setCategory(gameSet.category);
+      console.log(category);
+      let splitWord = gameSet.word.split("");
+      //if (guess.length === 0) {
+      for (let i = 0; i < gameSet.word.length; i++) {
+        if (splitWord[i] !== " ") {
+          newGuess.push(" _ ");
+        } else {
+          newGuess.push(" ");
         }
       }
+
       setGuess(newGuess);
+      //}
     }
-  }, [props.level]);
+  }, [props.level, next]);
 
   //checks for correct letters and updates lines when correct letter hits
   function correctAnswers(letter) {
@@ -50,8 +73,18 @@ const CreateGame = (props) => {
   function won() {
     if (guess.join("") === selectedWord) {
       setScore(score + 1);
-      alert("You Won!!");
+      setDisplay("inline");
+      setTimeout(() => {
+        alert("YOU WON!");
+      }, 500);
     }
+  }
+  function playNext() {
+    setDisplay("none");
+    setNext(true);
+    setTimeout(() => {
+      setNext(false);
+    }, 1000);
   }
 
   return (
@@ -63,7 +96,14 @@ const CreateGame = (props) => {
           <span key={index}>{line}</span>
         ))}
       </div>
-      <Alphabet selectedWord={selectedWord} correctAnswers={correctAnswers} />
+      <Alphabet
+        selectedWord={selectedWord}
+        correctAnswers={correctAnswers}
+        next={next}
+      />
+      <button onClick={() => playNext()} style={{ display: display }}>
+        Play Next
+      </button>
     </div>
   );
 };

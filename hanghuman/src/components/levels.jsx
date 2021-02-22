@@ -30,9 +30,9 @@ function Levels(props) {
   }, [props.toggleFetch]);
 
   function set() {
-    setEasyLvl(easy[Math.floor(Math.random() * easy.length)]);
-    setMedLvl(med[Math.floor(Math.random() * med.length)]);
-    setHardLvl(hard[Math.floor(Math.random() * hard.length)]);
+    setEasyLvl(easy);
+    setMedLvl(med);
+    setHardLvl(hard);
   }
 
   return (
@@ -40,7 +40,6 @@ function Levels(props) {
       <div className="levels-link">
         <Link to="/">Home</Link>
       </div>
-      {/* <Score /> */}
       {key.toString("") === "easy" ? (
         <CreateGame level={easyLvl} toggleFetch={props.toggleFetch} />
       ) : null}

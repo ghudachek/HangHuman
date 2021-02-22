@@ -67,6 +67,7 @@ function Alphabet(props) {
             decrement={decrement}
             answers={answers}
             correctAnswers={props.correctAnswers}
+            next={props.next}
           />
         ))}
       </div>

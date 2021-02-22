@@ -14,7 +14,8 @@ function WinLose(props) {
         </button>
       </div>
     );
-  } else return null;
+  } else {
+    return null;
+  }
 }
-
 export default WinLose;
