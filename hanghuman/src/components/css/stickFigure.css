@@ -46,7 +46,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   transform-origin: center bottom;
-  z-index: 0;
+  z-index: 2;
   grid-column-start: 10;
   grid-column-end: 12;
   grid-row-start: 2;
@@ -63,6 +63,10 @@
   grid-row-start: 6;
   grid-row-end: 15;
   justify-self: center;
+  animation-name: change-color;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 .leftleg {
@@ -98,6 +102,7 @@
   grid-row-start: 6;
   grid-row-end: 11;
   justify-self: center;
+  z-index: 0;
 }
 .rightarmupper {
   width: 0px;
@@ -105,6 +110,7 @@
   background-color: black;
   grid-column-start: 10;
   grid-row-start: 2;
+  z-index: 0;
   grid-row-end: 7;
   justify-self: end;
   transform: rotate(40deg);
@@ -112,7 +118,20 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-
+@keyframes change-color {
+  0% {
+    background-color: rgb(153, 223, 235);
+    border: 7px solid rgb(153, 223, 235);
+  }
+  50% {
+    background-color: rgb(44, 60, 133);
+    border: 7px solid rgb(44, 60, 133);
+  }
+  100% {
+    background-color: rgb(153, 213, 235);
+    border: 7px solid rgb(153, 213, 235);
+  }
+}
 @keyframes wave {
   0% {
     transform-origin: bottom left;

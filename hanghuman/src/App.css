@@ -22,6 +22,9 @@ button:disabled {
   background-color: grey;
   background-image: linear-gradient(#1b1c1f, #8998b4);
 }
+a {
+  color: black;
+}
 a:visited {
   color: black;
   background-color: #a1b5d8;

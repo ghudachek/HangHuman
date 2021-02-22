@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/hang-human.css";
-import beach from "./css/beach.jpg";
+
 const HangHuman = (props) => {
   return (
     <div className="game-human">

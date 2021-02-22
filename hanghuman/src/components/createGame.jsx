@@ -83,11 +83,6 @@ const CreateGame = (props) => {
           <span key={index}>{line}</span>
         ))}
       </div>
-      <Alphabet
-        selectedWord={selectedWord}
-        correctAnswers={correctAnswers}
-        next={next}
-      />
       <button
         className="next-btn"
         onClick={() => playNext()}
@@ -95,6 +90,12 @@ const CreateGame = (props) => {
       >
         Play Next
       </button>
+
+      <Alphabet
+        selectedWord={selectedWord}
+        correctAnswers={correctAnswers}
+        next={next}
+      />
     </div>
   );
 };

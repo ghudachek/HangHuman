@@ -2,10 +2,7 @@
   display: grid;
   grid-template-columns: 2fr repeat(15, 25px) 2fr;
   grid-template-rows: repeat(14, 25px);
-  border: 2px solid black;
-  background-image: url("./tornado.jpg");
-  background-position: center;
-  background-size: cover;
+  margin: 50px;
 }
 .bottom {
   height: 0px;
@@ -134,6 +131,12 @@
   justify-self: center;
 }
 @media only screen and (max-width: 1100px) {
+  .game-human {
+    display: grid;
+    grid-template-columns: 2fr repeat(15, 25px) 2fr;
+    grid-template-rows: repeat(14, 25px);
+    margin: 30px;
+  }
   .H-eye {
     width: 15px;
     height: 25px;
@@ -182,7 +185,7 @@
     display: grid;
     grid-template-columns: 3fr repeat(15, 25px) 2fr;
     grid-template-rows: repeat(14, 25px);
-    border: 2px solid black;
+    margin: 20px;
   }
   .bottom {
     height: 0px;

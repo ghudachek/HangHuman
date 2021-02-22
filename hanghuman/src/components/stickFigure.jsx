@@ -8,11 +8,11 @@ const stickFigure = () => {
       <div className="eyeRight"></div>
       <div className="arc"></div>
       <div className="head"></div>
-      <div className="torso"></div>
       <div className="leftarm"></div>
       <div className="rightarmupper"></div>
       <div className="leftleg"></div>
       <div className="rightleg"></div>
+      <div className="torso"></div>
     </div>
   );
 };

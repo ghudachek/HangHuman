@@ -13,9 +13,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       const resp = await axios.get(baseURL, config);
-
       setGames(resp.data);
-      console.log(resp.data);
     };
     getData();
   }, [toggleFetch]);
