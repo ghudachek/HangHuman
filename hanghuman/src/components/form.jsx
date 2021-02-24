@@ -24,11 +24,11 @@ function Form(props) {
 
   return (
     <div className="form">
-      <div className="link">
+      <div className="form-link">
         <Link to="/">Home</Link>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form className="form-content" onSubmit={handleSubmit}>
         <h4> Create Game:</h4>
         <label> Word:</label>
         <input value={word} onChange={(e) => setWord(e.target.value)} />

@@ -1,6 +1,6 @@
-import Button from "./button";
-import HangHuman from "./hanghuman.jsx";
-import Lose from "./lose";
+import Button from "./Button";
+import HangHuman from "./Hanghuman.jsx";
+import Lose from "./Lose";
 import { useState } from "react";
 import "./css/hang-human.css";
 

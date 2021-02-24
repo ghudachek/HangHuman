@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StickFigure from "./stickFigure";
+import StickFigure from "./StickFigure";
 function Header() {
   return (
     <div className="header-all">

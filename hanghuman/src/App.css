@@ -9,12 +9,15 @@
   text-align: right;
   padding-right: 20px;
 }
-.link {
+.form-link {
   font-family: "Courier New", Courier, monospace;
-  font-size: 30px;
+  font-size: 25px;
   text-align: right;
   padding-right: 20px;
   color: black;
+}
+.form-content {
+  padding-bottom: 350px;
 }
 .header h4 {
   font-family: "Truculenta";
@@ -66,9 +69,7 @@ span {
   font-family: "ropest";
   font-size: 70px;
 }
-.form {
-  margin: 0 auto;
-}
+
 .form h4 {
   font-size: 50px;
   border-bottom: dotted white;

@@ -146,7 +146,6 @@
     transform: rotate(50deg);
   }
 }
-
 @media only screen and (max-width: 950px) {
   .eye {
     width: 10px;
