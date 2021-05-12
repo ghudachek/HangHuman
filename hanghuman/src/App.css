@@ -2,6 +2,8 @@
   text-align: center;
   background-color: #3d5a80d5;
   background-size: cover;
+  height: 130vh;
+  min-height: fit-content;
   font-family: "Truculenta", sans-serif;
 }
 .levels-link {

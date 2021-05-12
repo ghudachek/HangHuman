@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import CreateGame from "./createGame";
+import CreateGame from "./CreateGame";
 import "./css/game.css";
 
 function Levels(props) {

@@ -2,7 +2,7 @@
 
 Title: HangHuman
 
-Description: Hangman (but gender-nuetral) online version! Varying levels of difficulty where you must guess the words/phrases to save your hang-human!
+Description: Hangman (but gender-nuetral) online! Varying levels of difficulty where you must guess the words/phrases to save your hang-human!
 
 [Wireframes](https://drive.google.com/file/d/1GcjEYM1GT5iRfDvmRHxNyvqRrSsGkgUF/view?usp=sharing)
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Alphabet from "./alphabet";
+import Alphabet from "./Alphabet";
 import { useState, useEffect } from "react";
 import "./css/game.css";
 

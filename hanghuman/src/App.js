@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { baseURL, config } from "./services";
 import axios from "axios";
-import Levels from "./components/levels";
-import Header from "./components/header";
-import Form from "./components/form";
+import Levels from "./components/Levels";
+import Header from "./components/Header";
+import Form from "./components/Form";
 
 function App() {
   const [games, setGames] = useState();
